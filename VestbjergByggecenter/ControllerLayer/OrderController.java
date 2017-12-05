@@ -19,16 +19,16 @@ public class OrderController
        
     }
 
-    public Order createOrder(boolean delivery, String address){
+    public int createOrder(boolean delivery, String address){
         Order order = new Order(delivery, address);
         orderContainer.addOrder(order);
-        return order;
+        return order.getId();
     }
-    public Order createOrder(boolean delivery, String address, String phone){
+    public int createOrder(boolean delivery, String address, String phone){
         Order order = new Order(delivery, address);
         orderContainer.addOrder(order);
-        accountController.addOrder(phone, address, delivery);
-        return order;
+        accountController.addOrder(phone, order);
+        return order.getId();
     }
     
     public Order findOrder(int id){

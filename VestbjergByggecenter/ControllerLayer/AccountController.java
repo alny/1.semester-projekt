@@ -2,7 +2,7 @@ package ControllerLayer;
 import ModelLayer.AccountContainer;
 import ModelLayer.Account;
 import ModelLayer.Customer;
-
+import ModelLayer.Order;
 /**
  * Lav en beskrivelse af klassen CustomerController her.
  * 
@@ -12,13 +12,13 @@ import ModelLayer.Customer;
 public class AccountController
 {
     private AccountContainer accountContainer;
-    private OrderController orderController;
+    
     /**
      * Konstruktør for objekter af klassen CustomerController
      */
     public AccountController(){
         accountContainer = AccountContainer.getInstance();
-        orderController = new OrderController();
+        
     }
     
     public String updatePhone(String phone, String newPhone){
@@ -40,8 +40,8 @@ public class AccountController
         return accountContainer.findAccount(phone);
     }
     
-    public void addOrder(String phone, String address, boolean delivery){
-        accountContainer.addOrder(phone,orderController.createOrder(delivery, address));
+    public void addOrder(String phone, Order order){
+        accountContainer.addOrder(phone,order);
         
     }
 }
