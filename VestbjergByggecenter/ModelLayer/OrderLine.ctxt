@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=OrderLine
+comment1.params=amount
+comment1.target=OrderLine(int)
+comment2.params=newAmount
+comment2.target=void\ setAmount(int)
+comment3.params=
+comment3.target=int\ getAmount()
+numComments=4

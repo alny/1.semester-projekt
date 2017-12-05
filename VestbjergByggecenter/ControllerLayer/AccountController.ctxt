@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=AccountController
+comment0.text=\r\n\ Lav\ en\ beskrivelse\ af\ klassen\ CustomerController\ her.\r\n\ \r\n\ @author\ (dit\ navn\ her)\r\n\ @version\ (versions\ nummer\ eller\ dato\ her)\r\n
+comment1.params=
+comment1.target=AccountController()
+comment1.text=\r\n\ Konstrukt\u00F8r\ for\ objekter\ af\ klassen\ CustomerController\r\n
+comment2.params=phone\ newPhone
+comment2.target=void\ updatePhone(java.lang.String,\ java.lang.String)
+numComments=3

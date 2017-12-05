@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Order
+comment1.params=date\ totalPrice\ delivery
+comment1.target=Order(java.lang.String,\ double,\ java.lang.String)
+comment2.params=orderLine
+comment2.target=void\ addOrderLine(OrderLine)
+comment3.params=newDate
+comment3.target=void\ setDate(java.lang.String)
+comment4.params=newTotalPrice
+comment4.target=void\ setTotalPrice(double)
+comment5.params=newDelivery
+comment5.target=void\ setDelivery(java.lang.String)
+comment6.params=
+comment6.target=java.lang.String\ getDate()
+comment7.params=
+comment7.target=double\ getTotalPrice()
+comment8.params=
+comment8.target=java.lang.String\ getDelivery()
+numComments=9

@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=AccountContainer
+comment1.params=
+comment1.target=AccountContainer()
+comment2.params=
+comment2.target=AccountContainer\ getInstance()
+comment3.params=account
+comment3.target=void\ addAccount(Account)
+comment4.params=id
+comment4.target=Account\ getAccount(int)
+comment5.params=phone
+comment5.target=Account\ findAccount(java.lang.String)
+comment6.params=phone\ newPhone
+comment6.target=java.lang.String\ updatePhone(java.lang.String,\ java.lang.String)
+comment7.params=phone\ newAddress
+comment7.target=java.lang.String\ updateaddress(java.lang.String,\ java.lang.String)
+numComments=8

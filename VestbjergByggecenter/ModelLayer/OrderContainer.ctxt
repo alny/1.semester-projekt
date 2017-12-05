@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=OrderContainer
+comment1.params=
+comment1.target=OrderContainer()
+comment2.params=
+comment2.target=OrderContainer\ getInstance()
+comment3.params=order
+comment3.target=void\ addOrder(Order)
+comment4.params=id
+comment4.target=Order\ getOrder(int)
+numComments=5
