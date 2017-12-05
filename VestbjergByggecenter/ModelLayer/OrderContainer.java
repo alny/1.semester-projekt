@@ -7,7 +7,7 @@ public class OrderContainer {
     private ArrayList<Order> orderList;
     public static OrderContainer instance;
 
-    //Initialize constructor
+    //Initialize constructorr
     private OrderContainer(){
         orderList = new ArrayList();
     }
