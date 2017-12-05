@@ -35,9 +35,10 @@ public class ProductController
     }
     
     public String createUniqueProduct(int barcode, String name, String description, int price, int amount){
-        UniqueProduct uniqueProduct = new UniqueProduct(barcode, name, description, price, amount);
         Item newItem = new Item(name, description, price);
-        uniqueProduct.addItem(newItem);
+        UniqueProduct uniqueProduct = new UniqueProduct(barcode, name, description, price, amount);
+        uniqueProduct.addItem(newItem);        
+        productContainer.addProduct(uniqueProduct);
         return "Produkt oprettet";
     }
     
