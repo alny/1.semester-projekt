@@ -10,4 +10,6 @@ comment3.params=barcode\ name\ description\ price\ amount
 comment3.target=java.lang.String\ createMassProduct(int,\ java.lang.String,\ java.lang.String,\ int,\ int)
 comment4.params=barcode\ name\ description\ price\ amount
 comment4.target=java.lang.String\ createUniqueProduct(int,\ java.lang.String,\ java.lang.String,\ int,\ int)
-numComments=5
+comment5.params=barcode
+comment5.target=ModelLayer.Product\ findSpecificProduct(int)
+numComments=6

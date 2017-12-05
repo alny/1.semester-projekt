@@ -40,6 +40,10 @@ public class ProductController
         uniqueProduct.addItem(newItem);
         return "Produkt oprettet";
     }
+    
+    public Product findSpecificProduct(int barcode){
+        return productContainer.findProduct(barcode);
+    }
 
  
 }
