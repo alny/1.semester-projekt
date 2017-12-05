@@ -25,6 +25,20 @@ public class OrderContainer {
     }
     
     public Order getOrder(int id){
-        return orderList.get(id);
+        int index=0;
+        boolean found = false;
+        Order tmp = null;
+
+        while(index<orderList.size()&&!found){
+
+            if(id==orderList.get(index).getId()){
+                found = true;
+                tmp=orderList.get(index);
+            }
+            index++;
+
+        }
+
+        return tmp; 
     }
 }

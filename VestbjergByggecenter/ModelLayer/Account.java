@@ -1,5 +1,5 @@
 package ModelLayer;
-
+import java.util.ArrayList;
 
 public abstract class Account
 {
@@ -11,6 +11,7 @@ public abstract class Account
     private String zip;
     private String city;
     private String phone;
+    private ArrayList<Order> list;
 
     //initialise constructor for Account class
     public Account (String name, String address, 
@@ -22,6 +23,7 @@ public abstract class Account
         this.city = city;
         this.phone = phone;
         accountId = counter++;
+        list = new ArrayList<>();
     }
     
     //set methods
@@ -69,4 +71,12 @@ public abstract class Account
     public int getAccId(){
         return accountId;
     }
+    
+    public void addOrder(Order order){
+        list.add(order);
+    }
+    
+    
+    
+    
 }

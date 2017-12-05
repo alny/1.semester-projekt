@@ -59,5 +59,8 @@ public class AccountContainer {
         return "Adresse opdateret";
     }
     
+    public void addOrder(String phone,Order order){
+        findAccount(phone).addOrder(order);
+    }
 }
 

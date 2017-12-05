@@ -7,16 +7,16 @@ public class Order{
     private static int counter = 1000;
     private String date;
     private double totalPrice;
-    private String delivery;
+    private boolean delivery = false;
+    private String deliveryAddress;
     private List<OrderLine> orderLine;
     
     //initialise contructor for class Order
-    public Order(String date, double totalPrice, String delivery){
+    public Order(boolean delivery, String address){
         // initialise instance variables
         orderId = counter++;
-        this.date = date;
-        this.totalPrice = totalPrice;
         this.delivery = delivery;
+        deliveryAddress = address;
         orderLine = new LinkedList<>();
     }
     //add orderLine to order
@@ -32,7 +32,7 @@ public class Order{
         totalPrice = newTotalPrice;
     }
     
-    public void setDelivery(String newDelivery){
+    public void setDelivery(boolean newDelivery){
         delivery = newDelivery;
     }
     
@@ -45,8 +45,12 @@ public class Order{
         return totalPrice;
     }
     
-    public String getDelivery(){
+    public boolean getDelivery(){
         return delivery;
+    }
+    
+    public int getId(){
+        return orderId;
     }
     
 }

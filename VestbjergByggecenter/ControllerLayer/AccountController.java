@@ -12,11 +12,13 @@ import ModelLayer.Customer;
 public class AccountController
 {
     private AccountContainer accountContainer;
+    private OrderController orderController;
     /**
      * Konstruktør for objekter af klassen CustomerController
      */
     public AccountController(){
-    accountContainer = AccountContainer.getInstance();
+        accountContainer = AccountContainer.getInstance();
+        orderController = new OrderController();
     }
     
     public String updatePhone(String phone, String newPhone){
@@ -31,10 +33,15 @@ public class AccountController
     String zip, String city, String phone, String type){
         Account customer = new Customer(name,address,zip,city,phone,type);
         accountContainer.addAccount(customer);
-        return "Succes: account oprettet";
+        return "Succes: konto oprettet";
     }
     
     public Account findCustomer(String phone){
         return accountContainer.findAccount(phone);
+    }
+    
+    public void addOrder(String phone, String address, boolean delivery){
+        accountContainer.addOrder(phone,orderController.createOrder(delivery, address));
+        
     }
 }

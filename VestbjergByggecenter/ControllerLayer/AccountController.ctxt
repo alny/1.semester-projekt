@@ -12,4 +12,6 @@ comment4.params=name\ address\ zip\ city\ phone\ type
 comment4.target=java.lang.String\ createAccount(java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String)
 comment5.params=phone
 comment5.target=ModelLayer.Account\ findCustomer(java.lang.String)
-numComments=6
+comment6.params=phone\ address\ delivery
+comment6.target=void\ addOrder(java.lang.String,\ java.lang.String,\ boolean)
+numComments=7
