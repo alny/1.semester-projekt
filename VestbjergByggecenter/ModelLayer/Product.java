@@ -24,7 +24,7 @@ public abstract class Product
         this.name = name;
         this.description = description;
         this.price = price;
-        this.amount = amount;
+        this.price = price;
         
     }
 

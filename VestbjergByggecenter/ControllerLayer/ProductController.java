@@ -25,10 +25,6 @@ public class ProductController
         productContainer = ProductContainer.getInstance();
     }
     
-    public Product findProduct(int barcode){
-        return productContainer.findProduct(barcode);
-    }
-    
     public String createMassProduct(int barcode, String name, String description, int price, int amount){
         MassProduct newMassProduct = new MassProduct(barcode, name, description, price, amount);
         return "Produkt oprettet";
