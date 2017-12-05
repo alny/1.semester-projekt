@@ -8,13 +8,13 @@ public class ProductContainer
     public static ProductContainer instance;
     //Initialize constructor
     private ProductContainer(){
-        productList = new ArrayList();
+        productList = new ArrayList(); 
     }
     
     // Create or return Singleton
     public static ProductContainer getInstance(){
         if(instance == null){
-            instance = new ProductContainer();
+            instance = new ProductContainer(); 
         }
         return instance;
     }

@@ -8,7 +8,7 @@ public class UniqueProduct extends Product {
     private Item item;
     
     public UniqueProduct(int barcode, String name, String description, int price, int amount) {
-        super(barcode,name,description,price,amount);
+        super(barcode,name,description,price, amount);
         itemList = new HashMap<Integer,Item>();
     }
     
