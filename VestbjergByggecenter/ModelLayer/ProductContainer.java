@@ -1,9 +1,10 @@
-package ModelLayer;
+package ModelLayer; 
+
 import java.util.ArrayList;
 public class ProductContainer
 {
     // instance variables
-    private ArrayList<ProductMain> productList;
+    private ArrayList<Product> productList;
     public static ProductContainer instance;
     //Initialize constructor
     private ProductContainer(){
@@ -18,15 +19,12 @@ public class ProductContainer
         return instance;
     }
     
-    public void addProduct(ProductMain product){
+    public void addProduct(Product product){
         productList.add(product);
     }
     
-    public ProductMain getProduct(int barcode){
-        return productList.get(barcode);
-    }
     
-    public Product findProduct(String barcode){
-    return null;    
+    public Product findProduct(int barcode){
+        return productList.get(barcode); 
     }
 }

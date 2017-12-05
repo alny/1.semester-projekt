@@ -4,4 +4,6 @@ comment0.text=\r\n\ Lav\ en\ beskrivelse\ af\ klassen\ ProductController\ her.\r
 comment1.params=
 comment1.target=ProductController()
 comment1.text=\r\n\ Konstrukt\u00F8r\ for\ objekter\ af\ klassen\ ProductController\r\n
-numComments=2
+comment2.params=barcode
+comment2.target=ModelLayer.Product\ findProduct(int)
+numComments=3

@@ -9,12 +9,12 @@ package ModelLayer;
  */
 public class SimpleLine extends OrderLine
 {
-    private ProductMain product;
+    private Product product;
 
     /**
      * Constructor for objects of class SimpleLine
      */
-    public SimpleLine(int amount, ProductMain product)
+    public SimpleLine(int amount, Product product)
     {
         super(amount);
         this.product = product;

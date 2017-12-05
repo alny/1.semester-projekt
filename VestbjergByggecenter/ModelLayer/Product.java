@@ -1,26 +1,74 @@
 package ModelLayer;
-import java.util.*;
-public class Product extends ProductMain {
-    
-    
-    private Map<Integer,Item> itemList;
-    
-    public Product(int barcode, String name, String description, int price) {
-        super(barcode,name,description,price);
-        itemList = new HashMap<Integer,Item>();
-    }
-    //add item to the itemList
-    public void addItem(Item item){
-        itemList.put(item.getSerial(),item);
-        setAmount(getAmount()+1);
-    }
-    
-    public Item Sale(int id){
-        setAmount(getAmount()-1);
-        return itemList.remove(id);
-    }
-    
-   
 
 
+/**
+ * Write a description of class ProductMain here.
+ *
+ * @author (your name)
+ * @version (a version number or a date)
+ */
+public abstract class Product
+{
+    
+    private int barcode;
+    private String name;
+    private String description;
+    private int price;
+    private int amount;
+    /**
+     * Constructor for objects of class ProductMain
+     */
+    public Product(int barcode, String name, String description, int price)
+    {
+        this.barcode = barcode;
+        this.name = name;
+        this.description = description;
+        this.price = price;
+        
+    }
+
+    // Getters and setters methods
+    public void setBarcode(int newBarcode){
+        barcode = newBarcode;
+    }
+    
+    public int getBarcode(){
+        return barcode;
+    }
+    
+    public void setName(String newName){
+        name = newName;
+    }
+    
+    public String getName(){
+        return name;
+    }
+    
+    public void setDescription(String newDescription){
+        description = newDescription;
+    }
+    
+    public String getDescription(){
+        return description;
+    }
+    
+    public void setPrice(int newPrice){
+        price = newPrice;
+    }
+    
+    public int getPrice(){
+        return price;
+    }
+    
+    public void setAmount(int newAmount){
+        amount = newAmount;
+    }
+    
+    public int getAmount(){
+        return amount;
+    }
+    
+    
+    
+    
 }

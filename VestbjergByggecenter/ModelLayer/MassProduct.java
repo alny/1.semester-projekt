@@ -7,7 +7,7 @@ package ModelLayer;
  * @author (your name)
  * @version (a version number or a date)
  */
-public class MassProduct extends ProductMain
+public class MassProduct extends Product
 {
     
 
