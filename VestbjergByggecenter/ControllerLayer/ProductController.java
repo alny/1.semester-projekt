@@ -1,7 +1,9 @@
 package ControllerLayer;
 import ModelLayer.ProductContainer;
 import ModelLayer.Product;
-
+import ModelLayer.MassProduct;
+import ModelLayer.UniqueProduct;
+import ModelLayer.Item;
 
 /**
  * Lav en beskrivelse af klassen ProductController her.
@@ -13,6 +15,7 @@ public class ProductController
 {
     // instansvariabler - erstat eksemplet herunder med dine egne variabler
     private ProductContainer productContainer;
+  
     /**
      * Konstruktør for objekter af klassen ProductController
      */
@@ -23,9 +26,19 @@ public class ProductController
     }
     
     public Product findProduct(int barcode){
-        
         return productContainer.findProduct(barcode);
+    }
     
+    public String createMassProduct(int barcode, String name, String description, int price, int amount){
+        MassProduct newMassProduct = new MassProduct(barcode, name, description, price, amount);
+        return "Produkt oprettet";
+    }
+    
+    public String createUniqueProduct(int barcode, String name, String description, int price, int amount){
+        UniqueProduct uniqueProduct = new UniqueProduct(barcode, name, description, price, amount);
+        Item newItem = new Item(name, description, price);
+        uniqueProduct.addItem(newItem);
+        return "Produkt oprettet";
     }
 
  

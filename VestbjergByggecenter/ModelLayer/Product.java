@@ -18,12 +18,13 @@ public abstract class Product
     /**
      * Constructor for objects of class ProductMain
      */
-    public Product(int barcode, String name, String description, int price)
+    public Product(int barcode, String name, String description, int price, int amount)
     {
         this.barcode = barcode;
         this.name = name;
         this.description = description;
         this.price = price;
+        this.amount = amount;
         
     }
 

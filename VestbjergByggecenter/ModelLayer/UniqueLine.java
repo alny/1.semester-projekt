@@ -1,6 +1,5 @@
 package ModelLayer;
 
-
 /**
  * Write a description of class UniqueLine here.
  *
