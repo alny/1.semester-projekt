@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=MainMenuUI
+comment1.params=
+comment1.target=MainMenuUI()
+comment2.params=
+comment2.target=void\ entryMenu()
+comment3.params=
+comment3.target=int\ chooseMenu()
+numComments=4
