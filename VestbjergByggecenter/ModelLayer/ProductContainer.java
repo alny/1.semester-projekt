@@ -25,6 +25,6 @@ public class ProductContainer
     
     
     public Product findProduct(int barcode){
-        return productList.get(barcode); 
+        return productList.get(barcode);
     }
 }
