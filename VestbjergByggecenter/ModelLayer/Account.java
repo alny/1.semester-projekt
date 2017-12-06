@@ -1,5 +1,6 @@
 package ModelLayer;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public abstract class Account
 {
@@ -11,7 +12,8 @@ public abstract class Account
     private String zip;
     private String city;
     private String phone;
-    private ArrayList<Order> list;
+    private HashMap<Integer, Order> order;
+    private HashMap<Integer, Loan> loans;
 
     //initialise constructor for Account class
     public Account (String name, String address, 
@@ -23,7 +25,8 @@ public abstract class Account
         this.city = city;
         this.phone = phone;
         accountId = counter++;
-        list = new ArrayList<>();
+        order = new HashMap<Integer, Order>();
+        loans = new HashMap<Integer, Loan>();
     }
     
     //set methods
@@ -73,7 +76,11 @@ public abstract class Account
     }
     
     public void addOrder(Order order){
-        list.add(order);
+        this.order.put(order.getId(), order);
+    }
+    
+    public void addLoan(Loan loan){
+        loans.put(loan.getId(), loan);
     }
     
     

@@ -8,6 +8,7 @@ public class Order{
     private String date;
     private double totalPrice;
     private boolean delivery = false;
+    private boolean paid = false;
     private String deliveryAddress;
     private List<OrderLine> orderLine;
     

@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Loan
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Loan\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=days
+comment1.target=Loan(int)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Loan\r\n
+comment2.params=item
+comment2.target=void\ addItem(Item)
+comment3.params=Serial
+comment3.target=void\ returnItem(int)
+comment4.params=
+comment4.target=int\ getId()
+numComments=5
