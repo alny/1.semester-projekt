@@ -19,8 +19,8 @@ public class OrderController
        
     }
 
-    public int createOrder(boolean delivery, String address){
-        Order order = new Order(delivery, address);
+    public int createOrder(){
+        Order order = new Order(false, null);
         orderContainer.addOrder(order);
         return order.getId();
     }
@@ -31,7 +31,19 @@ public class OrderController
         return order.getId();
     }
     
+    public String addItem(int id, int bar, int serial){
+        orderContainer.addItem(id, productController.saleItem(bar, serial));
+        return "item tilføjet";
+    }
+    
+    public String addProduct(int id, int bar, int amount){
+        orderContainer.addProduct(id, productController.saleProduct(bar, amount), amount);
+        return "varer tilføjet";
+    }
+    
     public Order findOrder(int id){
         return orderContainer.getOrder(id);
     }
+    
+    
 }

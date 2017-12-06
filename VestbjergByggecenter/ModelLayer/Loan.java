@@ -17,7 +17,7 @@ public class Loan
     private Date returnDate;
     private int Day;
     private Calendar calendar;
-    private int price;
+    private int totalPrice;
     
     /**
      * Constructor for objects of class Loan
@@ -38,7 +38,7 @@ public class Loan
     
     public void addItem(Item item){
         itemMap.put(item.getSerial(), item);
-        price =+ Day * 100;
+        totalPrice =+ Day * 100;
     }
     
     public void returnItem(int Serial){

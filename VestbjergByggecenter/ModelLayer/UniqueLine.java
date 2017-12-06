@@ -13,9 +13,9 @@ public class UniqueLine extends OrderLine
     /**
      * Constructor for objects of class UniqueLine
      */
-    public UniqueLine(int amount, Item item)
+    public UniqueLine(Item item)
     {
-        super(amount);
+        super(1);
         this.item = item;
     }
 

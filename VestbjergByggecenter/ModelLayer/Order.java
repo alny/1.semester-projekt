@@ -21,8 +21,16 @@ public class Order{
         orderLine = new LinkedList<>();
     }
     //add orderLine to order
-    public void addOrderLine(OrderLine orderLine){
-        this.orderLine.add(orderLine);
+    public void addOrderUniqueLine(Item item){
+        OrderLine oL = new UniqueLine(item);
+        orderLine.add(oL);
+        totalPrice =+ oL.getAmount();
+    }
+    
+    public void addOrderSimpleLine(Product product, int amount){
+        OrderLine oL = new SimpleLine(amount, product);
+        orderLine.add(oL);
+        totalPrice =+ oL.getAmount();
     }
     //set methods
     public void setDate(String newDate){

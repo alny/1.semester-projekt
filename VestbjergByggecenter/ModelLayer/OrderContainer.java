@@ -1,15 +1,16 @@
 package ModelLayer;
-import java.util.ArrayList;
+import java.util.HashMap;
 
 public class OrderContainer {
     // instance variables
-    private Order order;
-    private ArrayList<Order> orderList;
+
+    private HashMap<Integer, Order> orderMap;
     public static OrderContainer instance;
 
     //Initialize constructorr
     private OrderContainer(){
-        orderList = new ArrayList();
+        orderMap = new HashMap<Integer, Order>();
+        
     }
     
     // Create or return Singleton
@@ -21,24 +22,20 @@ public class OrderContainer {
     }
     
     public void addOrder(Order order){
-        orderList.add(order);
+        orderMap.put(order.getId(),order);
     }
     
     public Order getOrder(int id){
-        int index=0;
-        boolean found = false;
-        Order tmp = null;
-
-        while(index<orderList.size()&&!found){
-
-            if(id==orderList.get(index).getId()){
-                found = true;
-                tmp=orderList.get(index);
-            }
-            index++;
-
-        }
-
-        return tmp; 
+        return orderMap.get(id);
+    }
+    
+    public String addProduct(int id,Product product, int amount){
+        getOrder(id).addOrderSimpleLine(product, amount);
+        return "varer tilføjet";
+    }
+    
+    public String addItem(int id, Item item){
+        getOrder(id).addOrderUniqueLine(item);
+        return "varer tilføjet";
     }
 }

@@ -1,16 +1,15 @@
 package ModelLayer;
-
-import java.util.ArrayList;
+import java.util.HashMap;
 public class AccountContainer {
 
     // Instance variables
     private Account account;
-    private ArrayList<Account> accountList;
+    private HashMap<String, Account> accountMap;
     public static AccountContainer instance;
 
     //Initialize constructor
     private AccountContainer(){
-        accountList = new ArrayList();
+        accountMap = new HashMap<String, Account>();
     }
 
     // Create or return Singleton
@@ -23,29 +22,11 @@ public class AccountContainer {
 
     // Getter and setter methods
     public void addAccount(Account account){
-        accountList.add(account);
-    }
-
-    public Account getAccount(int id){
-        return accountList.get(id);
+        accountMap.put(account.getPhone(), account);
     }
 
     public Account findAccount(String phone){
-        int index=0;
-        boolean found = false;
-        Account tmp = null;
-
-        while(index<accountList.size()&&!found){
-
-            if(phone==accountList.get(index).getPhone()){
-                found = true;
-                tmp=accountList.get(index);
-            }
-            index++;
-
-        }
-
-        return tmp; 
+        return accountMap.get(phone);
     }
 
     public String updatePhone(String phone, String newPhone){

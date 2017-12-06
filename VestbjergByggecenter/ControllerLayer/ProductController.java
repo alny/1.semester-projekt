@@ -31,15 +31,29 @@ public class ProductController
     }
     
     public String createUniqueProduct(int barcode, String name, String description, int price, int amount){
-        Item newItem = new Item(name, description, price);
-        UniqueProduct uniqueProduct = new UniqueProduct(barcode, name, description, price, amount);
-        uniqueProduct.addItem(newItem);        
+        UniqueProduct uniqueProduct = new UniqueProduct(barcode, name, description, price, amount);      
         productContainer.addProduct(uniqueProduct);
         return "Produkt oprettet";
     }
     
     public Product findSpecificProduct(int barcode){
         return productContainer.findProduct(barcode);
+    }
+    
+    public Boolean isUnique(int barcode){
+        return productContainer.isUnique(barcode);
+    }
+    
+    public String createItem(int bar ,String name, String description, int price, boolean udlevering){
+        return productContainer.createItem(bar, name, description, price, udlevering);
+    }
+    
+    public Item saleItem(int bar, int serial){
+        return productContainer.saleItem(bar, serial);
+    }
+    
+    public MassProduct saleProduct(int bar,int amount){
+        return productContainer.saleProduct(bar, amount);
     }
     
     

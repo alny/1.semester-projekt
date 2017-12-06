@@ -21,8 +21,8 @@ public class MassProduct extends Product
         setAmount(getAmount() +1);
     }
     
-    public MassProduct Sale(){
-        setAmount(getAmount() -1);
+    public MassProduct Sale(int i){
+        setAmount(getAmount() -i);
         return this;
     }
 

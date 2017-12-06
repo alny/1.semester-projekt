@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.target=Item
-comment1.params=name\ description\ price
-comment1.target=Item(java.lang.String,\ java.lang.String,\ int)
+comment1.params=name\ description\ price\ udlevering
+comment1.target=Item(java.lang.String,\ java.lang.String,\ int,\ boolean)
 comment2.params=newName
 comment2.target=void\ setName(java.lang.String)
 comment3.params=

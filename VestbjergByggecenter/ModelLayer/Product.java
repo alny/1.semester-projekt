@@ -69,7 +69,14 @@ public abstract class Product
         return amount;
     }
     
+    public abstract <T> T Sale(int i);
     
+    
+    
+    public String create(String name, String description, int price, boolean udlevering){
+        return name;
+    }
+        
     
     
 }
