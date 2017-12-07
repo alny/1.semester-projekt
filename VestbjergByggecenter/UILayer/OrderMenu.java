@@ -11,6 +11,7 @@ public class OrderMenu
     public OrderMenu()
     {
         orderCtr = new OrderController();
+        productCtr = new ProductController();
     }
 
     public void OrderMainMenu(){
@@ -34,8 +35,7 @@ public class OrderMenu
         } else if(choice == 4) {
 
         } else if(choice == 5) {
-            MainMenuUI mainMenuUI = new MainMenuUI();
-            mainMenuUI.entryMenu(); 
+            
         }
 
     }
@@ -64,19 +64,28 @@ public class OrderMenu
             System.out.println("Scan eller tilføj vare");
             System.out.println("tast 5 for at stoppe indtastninger af varer");
             int barcode = keyboard.nextInt();
-            if(productCtr.isUnique(barcode)){
+            System.out.println(barcode);
+              
+            
+                if(barcode==5){
+                done = true;    
+                }
+            else if(productCtr.isUnique(barcode)==true){
                 System.out.println("Angiv serie nr.");
                 int serial = keyboard.nextInt();
                 orderCtr.addItem(id,barcode,serial);   
+            }else{
+            System.out.println("angiv antal");
+            int amount = keyboard.nextInt();
+                orderCtr.addProduct(id,barcode,amount);    
+                
             }
 
-            if(barcode == 5){
-                done = true;
-            }
+           
 
         }
-
     }
+    
     public void noCustSale(){
     }
     public void createOrder(){

@@ -33,7 +33,7 @@ public class ProductContainer
         if(findProduct(barcode) instanceof UniqueProduct){
             type = true;
         }
-        return false;
+        return type;
     }
     
     public String createItem(int barcode,String name, String description, int price, boolean udlevering){

@@ -34,6 +34,7 @@ public class ProductMenu {
              } else if(choice == 4) {
                 findProduct();
              } else if(choice == 5) {
+                 isu();
 
              }
     
@@ -116,6 +117,17 @@ public class ProductMenu {
         
         String vent = keyboard.next();
         System.out.println(" ");   
+    }
+    
+    public void isu(){
+    Scanner keyboard =  new Scanner(System.in);
+    int barcode = keyboard.nextInt();    
+    System.out.println(productCtr.isUnique(barcode));   
+    
+    
+    
+    String vent = keyboard.next();
+        System.out.println(" "); 
     }
 
 }

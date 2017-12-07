@@ -36,7 +36,7 @@ public class MainMenuUI
              if(choice == 1){
                  productMenu.ProductMainMenu();
              } else if(choice == 2) {
-                 System.out.println("Menu 2");
+                 orderMenu.OrderMainMenu();
              } else if(choice == 3) {
                  System.out.println("Menu 3");
              } else if(choice == 4) {
