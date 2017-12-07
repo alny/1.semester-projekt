@@ -27,7 +27,7 @@ public class LoanContainer
         return instance;
     }
     
-    private void addLoan(Loan loan){
+    public void addLoan(Loan loan){
         this.loan.put(loan.getId(),loan);
     }
 }
