@@ -46,7 +46,8 @@ public class ProductController
     }
     
     public String createItem(int bar ,String name, String description, int price, boolean udlevering){
-        return productContainer.createItem(bar, name, description, price, udlevering);
+        productContainer.createItem(bar, name, description, price, udlevering);
+        return "Kopi oprettet";
     }
     
     public Item saleItem(int bar, int serial){

@@ -28,16 +28,20 @@ public class MainMenuUI
     
     public void entryMenu(){
         Boolean exit = false;
-        int choice = chooseMenu();
+        
         
         while(!exit){
+            int choice = chooseMenu();
+            
              if(choice == 1){
                  productMenu.ProductMainMenu();
              } else if(choice == 2) {
                  System.out.println("Menu 2");
              } else if(choice == 3) {
                  System.out.println("Menu 3");
-             } else {
+             } else if(choice == 4) {
+                 customerMenu.CustomerMainMenu();
+             } else  if(choice ==5){
                  exit = true;
                  System.out.println("Ses snart igen");
              }   
@@ -53,6 +57,7 @@ public class MainMenuUI
         System.out.println(" 2. Ordre");
         System.out.println(" 3. Lån");
         System.out.println(" 4. Kunde");
+        System.out.println(" 5. Afslut");
         
         int choice = keyboard.nextInt();
         return choice;
