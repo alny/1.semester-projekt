@@ -19,9 +19,9 @@ public class LoanController
         loanCon = LoanContainer.getInstance();
     }
 
-    public Loan createLoan(int day){
+    public String createLoan(int day){
         Loan loan = new Loan(day);
         loanCon.addLoan(loan);
-        return loan;
+        return "Lån oprettet";
     }
 }
