@@ -3,7 +3,6 @@ import java.util.HashMap;
 public class AccountContainer {
 
     // Instance variables
-    private Account account;
     private HashMap<String, Account> accountMap;
     public static AccountContainer instance;
 
