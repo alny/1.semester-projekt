@@ -16,7 +16,6 @@ public class LoanContainer
      */
     private LoanContainer()
     {
-        instance = getInstance();
         loan = new HashMap<Integer, Loan>();
     }
 
