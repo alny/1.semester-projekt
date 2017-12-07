@@ -14,4 +14,6 @@ comment6.params=phone\ newAddress
 comment6.target=java.lang.String\ updateaddress(java.lang.String,\ java.lang.String)
 comment7.params=phone\ order
 comment7.target=void\ addOrder(java.lang.String,\ Order)
-numComments=8
+comment8.params=phone\ loan
+comment8.target=void\ addLoan(java.lang.String,\ Loan)
+numComments=9

@@ -30,7 +30,10 @@ public class AccountContainer {
     }
 
     public String updatePhone(String phone, String newPhone){
-        findAccount(phone).setPhone(newPhone);
+        Account a = findAccount(phone);
+        accountMap.remove(phone);
+        a.setPhone(newPhone);
+        addAccount(a);
         return "Telefonnr. opdateret";
 
     }
@@ -42,6 +45,10 @@ public class AccountContainer {
     
     public void addOrder(String phone,Order order){
         findAccount(phone).addOrder(order);
+    }
+    
+    public void addLoan(String phone, Loan loan){
+        findAccount(phone).addLoan(loan);
     }
 }
 

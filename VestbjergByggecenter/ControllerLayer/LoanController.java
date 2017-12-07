@@ -1,6 +1,6 @@
 package ControllerLayer;
 import ModelLayer.LoanContainer;
-
+import ModelLayer.Loan;
 /**
  * Write a description of class LoanController here.
  *
@@ -19,5 +19,9 @@ public class LoanController
         loanCon = LoanContainer.getInstance();
     }
 
-    
+    public Loan createLoan(int day){
+        Loan loan = new Loan(day);
+        loanCon.addLoan(loan);
+        return loan;
+    }
 }

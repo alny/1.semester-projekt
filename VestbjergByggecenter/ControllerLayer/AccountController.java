@@ -3,6 +3,7 @@ import ModelLayer.AccountContainer;
 import ModelLayer.Account;
 import ModelLayer.Customer;
 import ModelLayer.Order;
+import ModelLayer.Loan;
 /**
  * Lav en beskrivelse af klassen CustomerController her.
  * 
@@ -43,5 +44,9 @@ public class AccountController
     public void addOrder(String phone, Order order){
         accountContainer.addOrder(phone,order);
         
+    }
+    
+    public void AddLoan(String phone, Loan loan){
+        accountContainer.addLoan(phone, loan);
     }
 }

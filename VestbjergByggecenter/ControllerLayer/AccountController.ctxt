@@ -14,4 +14,6 @@ comment5.params=phone
 comment5.target=ModelLayer.Account\ findCustomer(java.lang.String)
 comment6.params=phone\ order
 comment6.target=void\ addOrder(java.lang.String,\ ModelLayer.Order)
-numComments=7
+comment7.params=phone\ loan
+comment7.target=void\ AddLoan(java.lang.String,\ ModelLayer.Loan)
+numComments=8
