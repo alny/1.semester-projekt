@@ -40,7 +40,7 @@ public class MainMenuUI
              } else {
                  exit = true;
                  System.out.println("Ses snart igen");
-                }   
+             }   
         }
     
     }

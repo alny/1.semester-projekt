@@ -27,6 +27,7 @@ public class ProductController
     
     public String createMassProduct(int barcode, String name, String description, int price, int amount){
         MassProduct newMassProduct = new MassProduct(barcode, name, description, price, amount);
+        productContainer.addProduct(newMassProduct);
         return "Produkt oprettet";
     }
     
@@ -54,9 +55,5 @@ public class ProductController
     
     public MassProduct saleProduct(int bar,int amount){
         return productContainer.saleProduct(bar, amount);
-    }
-    
-    
-
- 
+    } 
 }
