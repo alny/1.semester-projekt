@@ -28,9 +28,11 @@ public class MainMenuUI
     
     public void entryMenu(){
         Boolean exit = false;
-        int choice = chooseMenu();
+        
         
         while(!exit){
+          int choice = chooseMenu();
+            
              if(choice == 1){
                  productMenu.ProductMainMenu();
              } else if(choice == 2) {

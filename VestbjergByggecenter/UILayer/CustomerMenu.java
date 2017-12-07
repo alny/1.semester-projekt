@@ -19,37 +19,32 @@ public class CustomerMenu
 
     public void CustomerMainMenu(){
         Scanner keyboard = new Scanner(System.in);
-        
+
         System.out.println("\f##### Kunde Menu #####");
         System.out.println("Indtast et tal mellem 1-5 for at vælge menu");
-        System.out.println(" 1");
-        System.out.println(" 2");
-        System.out.println(" 3");
-        System.out.println(" 4");
-        System.out.println(" 5. Go Back");
-        
+        System.out.println(" 1. Opret Kunde");
+        System.out.println(" 2. Opdater Kunde");
+        System.out.println(" 3. Go Back");
+
         int choice = keyboard.nextInt();
-          if(choice == 1){
-              cretaAccount();
-                
-             } else if(choice == 2) {
-                 
-             } else if(choice == 3) {
-                
-             } else if(choice == 4) {
-                
-             } else if(choice == 5) {
-             MainMenuUI mainMenuUI = new MainMenuUI();
-                mainMenuUI.entryMenu();
-                    
-             }
-    
+        if(choice == 1){
+            cretaAccount();
+
+        } else if(choice == 2) {
+            updateAccount();
+
+        } else if(choice == 3) {
+            
+            
+
+        }
+
     }
-    
+
     public void cretaAccount(){
-        
-    Scanner keyboard =  new Scanner(System.in);
-        
+
+        Scanner keyboard =  new Scanner(System.in);
+
         System.out.println("Kunde Navn:" );
         String name = keyboard.next();
         System.out.println("Kunde Adresse:" );
@@ -62,12 +57,40 @@ public class CustomerMenu
         String phone = keyboard.next();
         System.out.println("Kunde type:" );
         String type = keyboard.next();
-        
+
         System.out.println("### " +accountCtr.createAccount(name, address, zip, city, phone, type)+" ###");
-        
+
         String vent = keyboard.next();
         System.out.println(" ");
-        
+
     }
-    
+
+    public void updateAccount(){
+        Scanner keyboard =  new Scanner(System.in);
+
+        System.out.println("Vælg hvilket felt du vil opdatere");
+        System.out.println("tast 1. for Telefon");
+        System.out.println("tast 2. for Adresse");
+        int valg = keyboard.nextInt();
+        if(valg==1){
+            System.out.println("angiv nuværende telefon nr.");
+            String phone = keyboard.next();
+            System.out.println("angiv nyt telefon nr.");
+            String newPhone = keyboard.next();      
+
+            accountCtr.updatePhone(phone, newPhone);
+
+        }
+
+        if(valg==2){
+            System.out.println("angiv telefon nr.");
+            String phone = keyboard.next();
+            System.out.println("angiv ny adresse");
+            String newAddress = keyboard.next();      
+
+            accountCtr.updateAddress(phone, newAddress);
+
+        }
+
+    }
 }
