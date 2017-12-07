@@ -19,9 +19,7 @@ public class Customer extends Account
     public void setType(String newType){
         newType = type;
     }
-    
-    
-    
+
     //get method
     public String getType(){
         return type;
