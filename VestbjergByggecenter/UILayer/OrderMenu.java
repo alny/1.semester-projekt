@@ -35,7 +35,7 @@ public class OrderMenu
         } else if(choice == 4) {
 
         } else if(choice == 5) {
-            
+
         }
 
     }
@@ -48,6 +48,7 @@ public class OrderMenu
         System.out.println("tast 2 for levering");
         int levering = keyboard.nextInt();
         String address = "";
+        int tmpsum=0;
         if(levering == 1){
             delivery = false;
         }else{
@@ -64,34 +65,43 @@ public class OrderMenu
             System.out.println("Scan eller tilføj vare");
             System.out.println("tast 5 for at stoppe indtastninger af varer");
             int barcode = keyboard.nextInt();
-            System.out.println(barcode);
-              
-            
-                if(barcode==5){
-                done = true;    
-                }
+
+            if(barcode==5){
+                done = true;
+                System.out.println("Total = " + tmpsum);
+                System.out.println("ja - for at bekræfte");
+                String vent = keyboard.next();
+                System.out.println("ja - for at bekræfte");
+
+            }
             else if(productCtr.isUnique(barcode)==true){
                 System.out.println("Angiv serie nr.");
                 int serial = keyboard.nextInt();
-                orderCtr.addItem(id,barcode,serial);   
-            }else{
-            System.out.println("angiv antal");
-            int amount = keyboard.nextInt();
-                orderCtr.addProduct(id,barcode,amount);    
-                
-            }
+                orderCtr.addItem(id,barcode,serial);
+                tmpsum = tmpsum+productCtr.getPrice(barcode);
+                System.out.println("Sub total: "+tmpsum);
+                System.out.println("Ja for at bekræfte");
 
-           
+                String vent = keyboard.next();
+                System.out.println(" ");
+
+            }else{
+                System.out.println("angiv antal");
+                int amount = keyboard.nextInt();
+                orderCtr.addProduct(id,barcode,amount);
+                tmpsum = tmpsum+(productCtr.getPrice(barcode)*amount);
+                System.out.println("Subtotal: "+tmpsum);
+
+            }
 
         }
     }
-    
+
     public void noCustSale(){
     }
+
     public void createOrder(){
         Scanner keyboard =  new Scanner(System.in);
 
-    
     }
-
 }

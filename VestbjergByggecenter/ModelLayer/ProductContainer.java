@@ -49,5 +49,8 @@ public class ProductContainer
         return findProduct(bar).Sale(amount);
     }
     
-    
+    public int getPrice(int bar){
+    return findProduct(bar).getPrice();    
+        
+    }
 }
