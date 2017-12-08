@@ -21,7 +21,8 @@ public class CustomerMenu
         Scanner keyboard = new Scanner(System.in);
 
         System.out.println("\f##### Kunde Menu #####");
-        System.out.println("Indtast et tal mellem 1-5 for at vælge menu");
+        System.out.println("Indtast et tal mellem 1-2 for at vælge menu");
+        System.out.println("Tast 3 for at gå tilbage");
         System.out.println(" 1. Opret Kunde");
         System.out.println(" 2. Opdater Kunde");
         System.out.println(" 3. Go Back");
@@ -34,8 +35,7 @@ public class CustomerMenu
             updateAccount();
 
         } else if(choice == 3) {
-            
-            
+
 
         }
 
