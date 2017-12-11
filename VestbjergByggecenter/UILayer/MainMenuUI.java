@@ -27,7 +27,7 @@ public class MainMenuUI
     }
     
     public void entryMenu(){
-        Boolean exit = false;
+        boolean exit = false;
         
         
         while(!exit){
@@ -63,9 +63,5 @@ public class MainMenuUI
         return choice;
     
     }
-    
-    
-    
-    
     
 }

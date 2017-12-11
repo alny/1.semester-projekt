@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class LoanMenu {
     private LoanController loanCtr;
-    
+    private MainMenuUI mainMenuUI;
     public LoanMenu() {
         loanCtr = new LoanController();       
     }
