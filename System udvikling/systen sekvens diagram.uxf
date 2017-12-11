@@ -4,30 +4,30 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>810</x>
-      <y>261</y>
-      <w>36</w>
-      <h>522</h>
+      <x>153</x>
+      <y>135</y>
+      <w>27</w>
+      <h>504</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>10.0;560.0;20.0;10.0</additional_attributes>
+    <additional_attributes>10.0;540.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1125</x>
-      <y>252</y>
-      <w>36</w>
-      <h>531</h>
+      <x>468</x>
+      <y>126</y>
+      <w>27</w>
+      <h>522</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>10.0;570.0;20.0;10.0</additional_attributes>
+    <additional_attributes>10.0;560.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLActor</id>
     <coordinates>
-      <x>783</x>
-      <y>162</y>
+      <x>117</x>
+      <y>54</y>
       <w>90</w>
       <h>99</h>
     </coordinates>
@@ -37,8 +37,8 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1098</x>
-      <y>225</y>
+      <x>432</x>
+      <y>99</y>
       <w>90</w>
       <h>36</h>
     </coordinates>
@@ -49,8 +49,8 @@ halign=left</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>819</x>
-      <y>306</y>
+      <x>153</x>
+      <y>171</y>
       <w>342</w>
       <h>36</h>
     </coordinates>
@@ -61,8 +61,8 @@ createOrder( ID)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>819</x>
-      <y>387</y>
+      <x>153</x>
+      <y>396</y>
       <w>342</w>
       <h>36</h>
     </coordinates>
@@ -73,20 +73,20 @@ addProduct(ID, amount)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>810</x>
-      <y>432</y>
-      <w>342</w>
+      <x>153</x>
+      <y>441</y>
+      <w>333</w>
       <h>36</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 totalPrice</panel_attributes>
-    <additional_attributes>360.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>350.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>810</x>
-      <y>531</y>
+      <x>153</x>
+      <y>513</y>
       <w>342</w>
       <h>36</h>
     </coordinates>
@@ -97,20 +97,20 @@ endSale</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>810</x>
-      <y>576</y>
-      <w>342</w>
+      <x>153</x>
+      <y>567</y>
+      <w>333</w>
       <h>36</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 totalPrice + taxes</panel_attributes>
-    <additional_attributes>360.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>350.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>855</x>
-      <y>72</y>
+      <x>198</x>
+      <y>9</y>
       <w>261</w>
       <h>36</h>
     </coordinates>
@@ -121,12 +121,48 @@ totalPrice + taxes</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>720</x>
-      <y>360</y>
+      <x>54</x>
+      <y>369</y>
       <w>549</w>
       <h>135</h>
     </coordinates>
     <panel_attributes>loop</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>153</x>
+      <y>216</y>
+      <w>342</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.
+delivery</panel_attributes>
+    <additional_attributes>10.0;20.0;360.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>153</x>
+      <y>270</y>
+      <w>342</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+addDelivery(address)</panel_attributes>
+    <additional_attributes>10.0;20.0;360.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>153</x>
+      <y>315</y>
+      <w>342</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+addCustomer(phone)</panel_attributes>
+    <additional_attributes>10.0;20.0;360.0;20.0</additional_attributes>
   </element>
 </diagram>
