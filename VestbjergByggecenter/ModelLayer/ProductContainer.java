@@ -36,11 +36,6 @@ public class ProductContainer
         return type;
     }
     
-    public String createItem(int barcode,String name, String description, int price, boolean udlevering){
-        return findProduct(barcode).create(name, description, price, udlevering);
-        
-    }
-    
     public Item saleItem(int bar, int serial){
         return findProduct(bar).Sale(serial);
     }
@@ -49,7 +44,7 @@ public class ProductContainer
         return findProduct(bar).Sale(amount);
     }
     
-    public int getPrice(int bar){
+    public double getPrice(int bar){
     return findProduct(bar).getPrice();    
         
     }

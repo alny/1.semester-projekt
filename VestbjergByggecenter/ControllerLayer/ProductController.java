@@ -41,14 +41,24 @@ public class ProductController
         return productContainer.findProduct(barcode);
     }
     
+    
     public Boolean isUnique(int barcode){
         return productContainer.isUnique(barcode);
     }
     
     public String createItem(int bar ,String name, String description, int price, boolean udlevering){
-        productContainer.createItem(bar, name, description, price, udlevering);
-        return "Kopi oprettet";
+        String kopi = "Kopi oprettet";
+        if(isUnique(bar) == true){
+            UniqueProduct test = (UniqueProduct)findSpecificProduct(bar);
+            test.create(name, description, price, udlevering);
+        }
+        else{
+            kopi = "kan ikke tilføje items til et ikke unikt product";
+        }
+        return kopi;
     }
+    
+    //public String returnItem(int bar)
     
     public Item saleItem(int bar, int serial){
         return productContainer.saleItem(bar, serial);
@@ -63,7 +73,5 @@ public class ProductController
     return productContainer.getPrice(bar);    
     }
     
-    public void returnItem(int bar, int serail){
-        productContainer.findProduct(bar).
-    }
+   
 }
