@@ -29,4 +29,21 @@ public class LoanContainer
     public void addLoan(Loan loan){
         this.loan.put(loan.getId(),loan);
     }
+    
+    public void returnLoan(int id){
+        findLoan(id).returnItem(id);
+    }
+    
+    public String payLoan(int id){
+        findLoan(id).pay();
+        return "lån betalt";
+    }
+    
+    public Loan findLoan(int id){
+        return loan.get(id);
+    }
+    
+    public void addItem(int id, Item  item){
+        findLoan(id).addItem(item);
+    }
 }

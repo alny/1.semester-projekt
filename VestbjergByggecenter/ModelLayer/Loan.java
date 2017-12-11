@@ -18,6 +18,8 @@ public class Loan
     private int Day;
     private Calendar calendar;
     private int totalPrice;
+    private boolean paid = false;
+    
     
     /**
      * Constructor for objects of class Loan
@@ -43,10 +45,17 @@ public class Loan
     
     public void returnItem(int Serial){
         itemMap.remove(Serial);
+        Date date = new Date();
+        if(date.after(returnDate)){
+            totalPrice += 500;
+        }
     }
     
     public int getId(){
         return id;
     }
     
+    public void pay(){
+        paid = true;
+    }
 }
