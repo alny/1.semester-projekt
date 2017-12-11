@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>208</x>
+      <y>1112</y>
+      <w>200</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>Order
+-
+- orderId int 
+- counter int 
+- date String 
+- totalprice double
+- delivery boolean 
+- paid boolean
+- deliveryaddress string 
+- orderLine List 
+-
++ addOrderUniqueLine(item Item)
++ addOrderSimpleLine(product
++ set and get methods
+ </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>440</x>
+      <y>1128</y>
+      <w>184</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>OrderContainer
+-
+- orderList ArrayList 
+- _instance OrderContainer_
+-
++ _getInstance_
++ addORder (order Order)
++ getOrder (id int)
++ addProduct(id int, product Product, amount int)
++ addItem(id int, item Item)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>400</x>
+      <y>1168</y>
+      <w>56</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;50.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>264</x>
+      <y>856</y>
+      <w>80</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>OrderLine
+-
+- amount int
+-
++set and get </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>296</x>
+      <y>928</y>
+      <w>24</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;230.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>408</x>
+      <y>856</y>
+      <w>80</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>SimpleLine
+-
+- product ProductMain
+-
++ get and set</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>336</x>
+      <y>896</y>
+      <w>88</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>90.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>144</x>
+      <y>880</y>
+      <w>80</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>UniqueLine
+-
+- item Item
+-</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>216</x>
+      <y>896</y>
+      <w>64</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;60.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>144</x>
+      <y>688</y>
+      <w>104</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Item
+-
+- name String
+- description String 
+- price int 
+- sreialNumber int 
+- count int
+- pickUpStorage boolean
+-
++ set and get </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>192</x>
+      <y>800</y>
+      <w>24</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>400</x>
+      <y>688</y>
+      <w>80</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>UniqueProduct
+-
+- itemMap map
+-
++ additem(item Item)
++ create(name String, description String, price int, boolean udlevering)
++ sale(id int)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>240</x>
+      <y>728</y>
+      <w>176</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;200.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>544</x>
+      <y>688</y>
+      <w>112</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>Product
+-
+- barcode int
+- name String
+. description String 
+- price int 
+- amount int 
+-
+T sale(i int)
+create(name String, description String price int boolean udlevering)
++ get and set </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>464</x>
+      <y>720</y>
+      <w>96</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>544</x>
+      <y>840</y>
+      <w>80</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>MassProduct 
+-
+addItem(amount int)
+sale()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>584</x>
+      <y>792</y>
+      <w>24</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>752</x>
+      <y>592</y>
+      <w>184</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>ProductContainer
+-
+- productList ArrayList 
+- instance ProductContainer
+-
++ addProduct(Product ProductMain)
++ isUnique(barcode)
++ findProduct (barcode String)
++ createItem(bar int, serial int)
++ saleItem(bar int, serial int)
++ saleproduct(bar int, amount int)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>648</x>
+      <y>632</y>
+      <w>120</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;70.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>648</x>
+      <y>1136</y>
+      <w>80</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Costumer
+-
+- String Type 
+-
++ set and get </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>808</x>
+      <y>1128</y>
+      <w>136</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>Account
+-
+- accountId int 
+- counter int 
+- name String
+- address string 
+- zip String 
+- city String 
+- phone String 
+- order hashMap
+- loans hashmap
+- 
++ addORder(order Order)
++ addLoan(loan Loan)
++ get and set </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>720</x>
+      <y>1168</y>
+      <w>104</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;110.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>616</x>
+      <y>944</y>
+      <w>264</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>AccountContainer
+-
+- accountList ArrayList
+- instance AccountContainer
+-
++ getInstance()
++ addAccount(account Account)
++ findAccount(phone String)
++ updatePhone(phone String, newPhone String)
++ updateAddress(phone String, newAddress String
++ addOrder(phone  Stirng, order Order)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>840</x>
+      <y>1064</y>
+      <w>24</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>80</x>
+      <y>552</y>
+      <w>824</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;1010.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>976</x>
+      <y>1136</y>
+      <w>152</w>
+      <h>176</h>
+    </coordinates>
+    <panel_attributes>Loan 
+-
+- itemMap HashMap 
+- id int 
+- coutn int 
+-returnDate Date
+- day int
+-calendar Calendar 
+- totalprice int
+-
++ addItem(item Item)
++ returnItem(serial int)
++ getid()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>936</x>
+      <y>1200</y>
+      <w>56</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;&gt;&gt;</panel_attributes>
+    <additional_attributes>50.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1176</x>
+      <y>1136</y>
+      <w>160</w>
+      <h>176</h>
+    </coordinates>
+    <panel_attributes>LoanContainer
+-
+- loan Hashmap 
+- instance LoanContainer
+-
+- _getInstance_
+- addLoan(loan Loan)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1120</x>
+      <y>1200</y>
+      <w>72</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>112</x>
+      <y>728</y>
+      <w>960</w>
+      <h>664</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;&gt;&gt;</panel_attributes>
+    <additional_attributes>40.0;10.0;10.0;10.0;20.0;810.0;1180.0;810.0;1180.0;730.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>480</x>
+      <y>792</y>
+      <w>80</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;&gt;&gt;</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>264</x>
+      <y>1272</y>
+      <w>616</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0;750.0;80.0;750.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>288</x>
+      <y>216</y>
+      <w>184</w>
+      <h>248</h>
+    </coordinates>
+    <panel_attributes>ProductController
+-
+- productContainer ProductContainer
+-
++ createMassProduct(barcode int, name String, description String, price int, amount int)
++ createUniqueProduct(barcode int, name String, description int, price int)
++ findSpecificProduct(barcode int)
++ isUnique(barcode int)
++ createItem( bar int, name String, description, price int, udlevering boolean)
++ saleItem(bar int, serial int)
++ saleProduct(bar int, amount int)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>0</x>
+      <y>216</y>
+      <w>264</w>
+      <h>248</h>
+    </coordinates>
+    <panel_attributes>AccountController
+-
+- accountContainer AccountContainer
+-
++ updatePhone(phone String, newPhone String)
++ updateAddress( phone String, newAddress String)
++ createAccount(name String, addres String, zip String, city String, phone String, type String)
++ findCostumer(phone String)
++ addOrder(phone String, order Order)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>864</x>
+      <y>216</y>
+      <w>176</w>
+      <h>248</h>
+    </coordinates>
+    <panel_attributes>System
+halign=left</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>504</x>
+      <y>216</y>
+      <w>320</w>
+      <h>248</h>
+    </coordinates>
+    <panel_attributes>OrderController
+-
+- orderContainer OrderContainer
+- productController ProductController
+- accountController AccountController
+-
++ createOrder()
++ createOrder( delivery boolean, address String, phone String)
++ addItem(id int, bar int, serial int)
++ addProduct(id int, bar int, amount int)
++ findOrder(id int)</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
