@@ -21,4 +21,6 @@ comment7.text=\r\n\ tilf\u00F8jer\ en\ order\ til\ en\ account\ som\ hentes\ p\u
 comment8.params=phone\ loan
 comment8.target=void\ addLoan(java.lang.String,\ Loan)
 comment8.text=\r\n\ tilf\u00F8jer\ et\ l\u00E5n\ til\ en\ account\ som\ hentes\ p\u00E5\ phone\ \r\n\ @param\ Loan\ loan\ og\ String\ phone\ \r\n
-numComments=9
+comment9.params=phone
+comment9.target=double\ customerReceivable(java.lang.String)
+numComments=10

@@ -1,5 +1,7 @@
 package ModelLayer;
 import java.util.HashMap;
+
+import java.util.*;
 public class AccountContainer {
 
     // Instance variables
@@ -68,6 +70,23 @@ public class AccountContainer {
      */
     public void addLoan(String phone, Loan loan){
         findAccount(phone).addLoan(loan);
+    }
+
+    public double customerReceivable(String phone){
+     HashMap<Integer, Order> map = findAccount(phone).getorders();
+     Set<Integer> keys=map.keySet();
+     Iterator<Integer> it=keys.iterator();
+     double amount = 0;        
+     while(it.hasNext()){
+         Integer key = it.next();
+        Order order = map.get(key);
+         if(order.getbetalt()==false){
+             amount = amount + order.getTotalPrice();
+         }
+
+     }    
+     return amount;  
+
     }
 }
 

@@ -37,7 +37,7 @@ public class LoanMenu {
         int dage = keyboard.nextInt();
         
         // TO-DO: Kald metoden
-        System.out.println("### " + loanCtr.createLoan(dage) + " ###");
+        //System.out.println("### " + loanCtr.createLoan(dage) + " ###");
         
         String vent = keyboard.next();
         System.out.println(" ");
