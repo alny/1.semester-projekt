@@ -22,11 +22,11 @@ public class LoanController
         aC = new AccountController();
     }
 
-    public Loan createLoan(int day, String phone){
+    public String createLoan(int day, String phone){
         Loan loan = new Loan(day);
         loanCon.addLoan(loan);
         aC.AddLoan(phone, loan);
-        return loan;
+        return loan.toString();
     }
     
     public void AddItem(int id, int bar, int serial){
@@ -34,7 +34,8 @@ public class LoanController
     }
     
     public String ReturnItem(int id, int bar, int serial){
-        
+        pController.returnItem(bar, loanCon.returnItem(id));
+        return "item er returneret";
     }
     
     

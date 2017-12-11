@@ -46,4 +46,8 @@ public class LoanContainer
     public void addItem(int id, Item  item){
         findLoan(id).addItem(item);
     }
+    
+    public Item returnItem(int id){
+        return findLoan(id).returnItem(id);
+    }
 }

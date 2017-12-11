@@ -43,12 +43,13 @@ public class Loan
         totalPrice =+ Day * 100;
     }
     
-    public void returnItem(int Serial){
-        itemMap.remove(Serial);
+    public Item returnItem(int Serial){
+        
         Date date = new Date();
         if(date.after(returnDate)){
             totalPrice += 500;
         }
+        return itemMap.remove(Serial);
     }
     
     public int getId(){

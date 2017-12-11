@@ -49,8 +49,8 @@ public class ProductController
     public String createItem(int bar ,String name, String description, int price, boolean udlevering){
         String kopi = "Kopi oprettet";
         if(isUnique(bar) == true){
-            UniqueProduct test = (UniqueProduct)findSpecificProduct(bar);
-            test.create(name, description, price, udlevering);
+            UniqueProduct p = (UniqueProduct)findSpecificProduct(bar);
+            p.create(name, description, price, udlevering);
         }
         else{
             kopi = "kan ikke tilføje items til et ikke unikt product";
@@ -58,7 +58,17 @@ public class ProductController
         return kopi;
     }
     
-    //public String returnItem(int bar)
+    public String returnItem(int bar, Item item){
+        String kopi = "Kopi oprettet";
+        if(isUnique(bar) == true){
+            UniqueProduct p = (UniqueProduct)findSpecificProduct(bar);
+            p.addItem(item);
+        }
+        else{
+            kopi = "kan ikke tilføje items til et ikke unikt product";
+        }
+        return kopi;
+    }
     
     public Item saleItem(int bar, int serial){
         return productContainer.saleItem(bar, serial);

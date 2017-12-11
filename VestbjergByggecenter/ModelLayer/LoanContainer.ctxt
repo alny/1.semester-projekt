@@ -16,4 +16,6 @@ comment6.params=id
 comment6.target=Loan\ findLoan(int)
 comment7.params=id\ item
 comment7.target=void\ addItem(int,\ Item)
-numComments=8
+comment8.params=id
+comment8.target=Item\ returnItem(int)
+numComments=9
