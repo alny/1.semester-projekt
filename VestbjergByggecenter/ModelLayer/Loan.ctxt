@@ -12,4 +12,6 @@ comment3.target=void\ returnItem(int)
 comment3.text=\r\n\ fjerner\ og\ returnere\ et\ Item\ fra\ l\u00E5n\r\n\ @param\ serialNumber\r\n
 comment4.params=
 comment4.target=int\ getId()
-numComments=5
+comment5.params=
+comment5.target=void\ pay()
+numComments=6
