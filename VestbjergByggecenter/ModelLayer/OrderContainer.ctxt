@@ -12,4 +12,6 @@ comment5.params=id\ product\ amount
 comment5.target=java.lang.String\ addProduct(int,\ Product,\ int)
 comment6.params=id\ item
 comment6.target=java.lang.String\ addItem(int,\ Item)
-numComments=7
+comment7.params=id
+comment7.target=void\ removeOrder(int)
+numComments=8

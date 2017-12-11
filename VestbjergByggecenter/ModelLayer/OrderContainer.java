@@ -38,4 +38,11 @@ public class OrderContainer {
         getOrder(id).addOrderUniqueLine(item);
         return "varer tilføjet";
     }
+    
+    public void removeOrder(int id){
+    orderMap.remove(id);  
+        
+    }
+    
+    
 }

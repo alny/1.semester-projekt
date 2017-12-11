@@ -13,4 +13,6 @@ comment5.params=id\ bar\ amount
 comment5.target=java.lang.String\ addProduct(int,\ int,\ int)
 comment6.params=id
 comment6.target=ModelLayer.Order\ findOrder(int)
-numComments=7
+comment7.params=id
+comment7.target=void\ removeOrder(int)
+numComments=8

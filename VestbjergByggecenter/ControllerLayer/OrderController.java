@@ -45,5 +45,10 @@ public class OrderController
         return orderContainer.getOrder(id);
     }
     
+    public void removeOrder(int id){
+    orderContainer.removeOrder(id);  
+}
+        
+    
     
 }
