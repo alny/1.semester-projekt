@@ -47,11 +47,6 @@ public class ProductContainer
         return type;
     }
 
-    public String createItem(int barcode,String name, String description, int price, boolean udlevering){
-        return findProduct(barcode).create(name, description, price, udlevering);
-
-    }
-
     /**
      * fjerner et uniqueItem fra et produkt og returnerer det
      * @param int bar og int serial 
@@ -75,7 +70,7 @@ public class ProductContainer
      * @param int bar 
      * @return int price 
      */
-    public int getPrice(int bar){
+    public double getPrice(int bar){
         return findProduct(bar).getPrice();    
 
     }
