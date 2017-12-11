@@ -36,11 +36,19 @@ public class Loan
         
     }
     
+    /**
+     * tiføjer et Item til lån
+     * @param item 
+     */
     public void addItem(Item item){
         itemMap.put(item.getSerial(), item);
         totalPrice =+ Day * 100;
     }
-    
+
+    /**
+     * fjerner og returnere et Item fra lån
+     * @param serialNumber
+     */
     public void returnItem(int Serial){
         itemMap.remove(Serial);
     }
@@ -48,5 +56,4 @@ public class Loan
     public int getId(){
         return id;
     }
-    
 }
