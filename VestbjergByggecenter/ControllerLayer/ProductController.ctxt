@@ -18,4 +18,6 @@ comment7.params=bar\ serial
 comment7.target=ModelLayer.Item\ saleItem(int,\ int)
 comment8.params=bar\ amount
 comment8.target=ModelLayer.MassProduct\ saleProduct(int,\ int)
-numComments=9
+comment9.params=bar
+comment9.target=int\ getPrice(int)
+numComments=10

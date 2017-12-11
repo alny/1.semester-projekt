@@ -16,4 +16,6 @@ comment7.params=bar\ serial
 comment7.target=Item\ saleItem(int,\ int)
 comment8.params=bar\ amount
 comment8.target=MassProduct\ saleProduct(int,\ int)
-numComments=9
+comment9.params=bar
+comment9.target=int\ getPrice(int)
+numComments=10

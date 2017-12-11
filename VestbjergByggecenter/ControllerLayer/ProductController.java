@@ -57,4 +57,9 @@ public class ProductController
     public MassProduct saleProduct(int bar,int amount){
         return productContainer.saleProduct(bar, amount);
     } 
+    
+    public int getPrice(int bar){
+        
+    return productContainer.getPrice(bar);    
+    }
 }
