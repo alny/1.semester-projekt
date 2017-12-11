@@ -17,6 +17,7 @@ public class UniqueLine extends OrderLine
     {
         super(1);
         this.item = item;
+        setPrice(item.getPrice());
     }
 
     

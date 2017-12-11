@@ -10,7 +10,7 @@ package ModelLayer;
 public class SimpleLine extends OrderLine
 {
     private Product product;
-
+    
     /**
      * Constructor for objects of class SimpleLine
      */
@@ -18,6 +18,7 @@ public class SimpleLine extends OrderLine
     {
         super(amount);
         this.product = product;
+        setPrice(product.getPrice()*getAmount());
     }
 
     

@@ -68,7 +68,7 @@ public class ProductController
         return productContainer.saleProduct(bar, amount);
     } 
     
-    public int getPrice(int bar){
+    public double getPrice(int bar){
         
     return productContainer.getPrice(bar);    
     }
