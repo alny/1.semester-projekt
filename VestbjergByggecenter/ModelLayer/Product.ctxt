@@ -27,5 +27,5 @@ comment7.target=java.lang.String\ getDescription()
 comment8.params=newPrice
 comment8.target=void\ setPrice(int)
 comment9.params=
-comment9.target=int\ getPrice()
+comment9.target=double\ getPrice()
 numComments=14

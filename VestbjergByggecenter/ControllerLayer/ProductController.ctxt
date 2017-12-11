@@ -19,5 +19,5 @@ comment7.target=ModelLayer.Item\ saleItem(int,\ int)
 comment8.params=bar\ amount
 comment8.target=ModelLayer.MassProduct\ saleProduct(int,\ int)
 comment9.params=bar
-comment9.target=int\ getPrice(int)
+comment9.target=double\ getPrice(int)
 numComments=10

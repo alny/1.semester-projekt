@@ -82,8 +82,10 @@ public abstract class Account
     public void addLoan(Loan loan){
         loans.put(loan.getId(), loan);
     }
-    
-    
-    
+     
+    public HashMap getorders(){
+    return order;    
+    }
+   
     
 }

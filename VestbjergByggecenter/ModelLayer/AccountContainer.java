@@ -1,10 +1,13 @@
 package ModelLayer;
 import java.util.HashMap;
+import java.util.*;
+
 public class AccountContainer {
 
     // Instance variables
     private HashMap<String, Account> accountMap;
     public static AccountContainer instance;
+   
 
     //Initialize constructor
     private AccountContainer(){
@@ -41,13 +44,31 @@ public class AccountContainer {
         findAccount(phone).setAddress(newAddress);
         return "Adresse opdateret";
     }
-    
+
     public void addOrder(String phone,Order order){
         findAccount(phone).addOrder(order);
     }
-    
+
     public void addLoan(String phone, Loan loan){
         findAccount(phone).addLoan(loan);
     }
+
+    public double customerReceivable(String phone){
+        HashMap<Integer, Order> map = findAccount(phone).getorders();
+        Set<Integer> keys=map.keySet();
+        Iterator<Integer> it=keys.iterator();
+        double amount = 0;        
+        while(it.hasNext()){
+            Integer key = it.next();
+            Order order = map.get(key);
+            if(order.getbetalt()==false){
+                amount = amount + order.getTotalPrice();
+            }
+
+        }    
+        return amount;  
+
+    }
+    
 }
 

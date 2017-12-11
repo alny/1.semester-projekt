@@ -9,4 +9,6 @@ comment3.params=
 comment3.target=void\ cretaAccount()
 comment4.params=
 comment4.target=void\ updateAccount()
-numComments=5
+comment5.params=
+comment5.target=void\ getReceivable()
+numComments=6

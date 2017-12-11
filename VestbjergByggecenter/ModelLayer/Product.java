@@ -13,7 +13,7 @@ public abstract class Product
     private int barcode;
     private String name;
     private String description;
-    private int price;
+    private double price;
     private int amount;
     /**
      * Constructor for objects of class ProductMain
@@ -57,7 +57,7 @@ public abstract class Product
         price = newPrice;
     }
     
-    public int getPrice(){
+    public double getPrice(){
         return price;
     }
     

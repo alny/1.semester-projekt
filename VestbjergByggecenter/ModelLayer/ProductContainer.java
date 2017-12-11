@@ -49,7 +49,7 @@ public class ProductContainer
         return findProduct(bar).Sale(amount);
     }
     
-    public int getPrice(int bar){
+    public double getPrice(int bar){
     return findProduct(bar).getPrice();    
         
     }
