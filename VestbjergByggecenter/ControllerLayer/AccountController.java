@@ -49,4 +49,8 @@ public class AccountController
     public void AddLoan(String phone, Loan loan){
         accountContainer.addLoan(phone, loan);
     }
+    
+    public double getReceivable(String phone){
+    return accountContainer.customerReceivable(phone);    
+    }
 }

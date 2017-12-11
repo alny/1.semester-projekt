@@ -11,6 +11,7 @@ public class Order{
     private boolean paid = false;
     private String deliveryAddress;
     private List<OrderLine> orderLine;
+    private boolean betalt;
     
     //initialise contructor for class Order
     public Order(boolean delivery, String address){
@@ -19,18 +20,19 @@ public class Order{
         this.delivery = delivery;
         deliveryAddress = address;
         orderLine = new LinkedList<>();
+        betalt=false;
     }
     //add orderLine to order
     public void addOrderUniqueLine(Item item){
         OrderLine oL = new UniqueLine(item);
         orderLine.add(oL);
-        totalPrice =+ oL.getAmount();
+        totalPrice =+ oL.getPrice();
     }
     
     public void addOrderSimpleLine(Product product, int amount){
         OrderLine oL = new SimpleLine(amount, product);
         orderLine.add(oL);
-        totalPrice =+ oL.getAmount();
+        totalPrice =+ oL.getPrice();
     }
     //set methods
     public void setDate(String newDate){
@@ -62,4 +64,8 @@ public class Order{
         return orderId;
     }
     
+    public boolean getbetalt(){
+        
+    return betalt;
+}
 }

@@ -25,7 +25,8 @@ public class CustomerMenu
         System.out.println("Tast 3 for at gå tilbage");
         System.out.println(" 1. Opret Kunde");
         System.out.println(" 2. Opdater Kunde");
-        System.out.println(" 3. Go Back");
+        System.out.println(" 3. Tjek Kunde tilgodehavende");
+        System.out.println(" 4. Tilbage");
 
         int choice = keyboard.nextInt();
         if(choice == 1){
@@ -35,6 +36,12 @@ public class CustomerMenu
             updateAccount();
 
         } else if(choice == 3) {
+            getReceivable();
+            
+
+
+        }
+          else if(choice == 4) {
 
 
         }
@@ -92,5 +99,13 @@ public class CustomerMenu
 
         }
 
+    }
+    
+    public void getReceivable(){
+    Scanner keyboard = new Scanner(System.in);
+    System.out.println("angiv kunde telefonnr.");
+    String phone = keyboard.next();
+    System.out.println("Vores tilgodehanvende ved kunden: "+accountCtr.getReceivable(phone));  
+    String vent = keyboard.next();
     }
 }

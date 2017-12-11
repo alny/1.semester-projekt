@@ -16,4 +16,6 @@ comment6.params=phone\ order
 comment6.target=void\ addOrder(java.lang.String,\ ModelLayer.Order)
 comment7.params=phone\ loan
 comment7.target=void\ AddLoan(java.lang.String,\ ModelLayer.Loan)
-numComments=8
+comment8.params=phone
+comment8.target=double\ getReceivable(java.lang.String)
+numComments=9
