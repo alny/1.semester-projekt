@@ -13,7 +13,14 @@ public class SupplierContainer{
         // initialise instance variables
         supplierMap = new HashMap<String, Supplier>();
     }
-
+    
+    public static SupplierContainer getInstance(){
+        if(instance == null){
+            instance = new SupplierContainer(); 
+        }
+        return instance;
+    }
+    
     public void addSupplier(Supplier supplier){
         supplierMap.put(supplier.getFirmName(), supplier);
     }

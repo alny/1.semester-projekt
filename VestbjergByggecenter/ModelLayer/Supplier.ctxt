@@ -1,10 +1,9 @@
 #BlueJ class context
 comment0.target=Supplier
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Supplier\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-comment1.params=firmName\ amountProduct
+comment1.params=firmName\ amountOfOrders
 comment1.target=Supplier(java.lang.String,\ int)
 comment2.params=
 comment2.target=java.lang.String\ getFirmName()
 comment3.params=
-comment3.target=void\ addProduct()
+comment3.target=int\ getAmountOfSales()
 numComments=4
