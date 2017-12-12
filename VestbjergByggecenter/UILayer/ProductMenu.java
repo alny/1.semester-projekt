@@ -114,5 +114,10 @@ public class ProductMenu {
         String vent = keyboard.next();
         System.out.println(" ");   
     }
+    
+    public void cretedummy(){
+    productCtr.createdummydata();    
+        
+    }
 
 }

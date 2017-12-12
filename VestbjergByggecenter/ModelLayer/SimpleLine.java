@@ -21,5 +21,7 @@ public class SimpleLine extends OrderLine
         setPrice(product.getPrice()*getAmount());
     }
 
-    
+    public String getName(){
+        return product.getName();
+    }
 }

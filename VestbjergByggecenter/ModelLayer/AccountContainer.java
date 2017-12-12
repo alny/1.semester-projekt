@@ -28,7 +28,7 @@ public class AccountContainer {
     /**
      * tilføjer en konto til accounts hashmap 
      * @param Account account
-     */    public void addAccount(Account account){
+     */ public void addAccount(Account account){
         accountMap.put(account.getPhone(), account);
     }
 

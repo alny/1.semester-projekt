@@ -19,6 +19,10 @@ public class UniqueLine extends OrderLine
         this.item = item;
         setPrice(item.getPrice());
     }
+    
+    public String getName(){
+        return item.getName();
+    }
 
     
 }

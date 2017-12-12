@@ -108,4 +108,8 @@ public class CustomerMenu
     System.out.println("Vores tilgodehanvende ved kunden: "+accountCtr.getReceivable(phone));  
     String vent = keyboard.next();
     }
+    
+    public void cfretedummy(){
+    accountCtr.createdummydata();    
+    }
 }

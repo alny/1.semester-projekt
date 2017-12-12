@@ -5,6 +5,7 @@ public abstract class OrderLine
     // instance variables
     private int amount;
     private double totalPrice;
+    private String name;
     public OrderLine(int amount)
     {
         // initialise instance variables
@@ -26,6 +27,10 @@ public abstract class OrderLine
     
     public double getPrice(){
         return totalPrice;
+    }
+    
+    public String getName(){
+        return name;
     }
     
     

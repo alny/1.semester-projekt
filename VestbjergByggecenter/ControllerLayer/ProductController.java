@@ -15,7 +15,7 @@ public class ProductController
 {
     // instansvariabler - erstat eksemplet herunder med dine egne variabler
     private ProductContainer productContainer;
-  
+
     /**
      * Konstruktør for objekter af klassen ProductController
      */
@@ -24,28 +24,27 @@ public class ProductController
         // initialiser instansvariable
         productContainer = ProductContainer.getInstance();
     }
-    
+
     public String createMassProduct(int barcode, String name, String description, int price, int amount){
         MassProduct newMassProduct = new MassProduct(barcode, name, description, price, amount);
         productContainer.addProduct(newMassProduct);
         return "Produkt oprettet";
     }
-    
+
     public String createUniqueProduct(int barcode, String name, String description, int price, int amount){
         UniqueProduct uniqueProduct = new UniqueProduct(barcode, name, description, price, amount);      
         productContainer.addProduct(uniqueProduct);
         return "Produkt oprettet";
     }
-    
+
     public Product findSpecificProduct(int barcode){
         return productContainer.findProduct(barcode);
     }
-    
-    
+
     public Boolean isUnique(int barcode){
         return productContainer.isUnique(barcode);
     }
-    
+
     public String createItem(int bar ,String name, String description, int price, boolean udlevering){
         String kopi = "Kopi oprettet";
         if(isUnique(bar) == true){
@@ -57,7 +56,7 @@ public class ProductController
         }
         return kopi;
     }
-    
+
     public String returnItem(int bar, Item item){
         String kopi = "Kopi oprettet";
         if(isUnique(bar) == true){
@@ -69,19 +68,31 @@ public class ProductController
         }
         return kopi;
     }
-    
+
     public Item saleItem(int bar, int serial){
         return productContainer.saleItem(bar, serial);
     }
-    
+
     public MassProduct saleProduct(int bar,int amount){
         return productContainer.saleProduct(bar, amount);
     } 
-    
+
     public double getPrice(int bar){
-        
-    return productContainer.getPrice(bar);    
+
+        return productContainer.getPrice(bar);    
     }
-    
-   
+
+    public void createdummydata(){
+        Integer i = 1;
+        int index = 0;
+        String k = "1";
+
+        while(index<10){
+
+            createMassProduct(i, "name", "description", 100, 2000);  
+            i++;
+            index++;
+        }   
+
+    }
 }

@@ -44,6 +44,9 @@ public class OrderContainer {
         
     }
     
+    public String[] invoiceLinePrint(int id){
+    return orderMap.get(id).getorderlines();    
+    }
     
     
 }

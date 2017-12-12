@@ -6,4 +6,6 @@ comment2.params=
 comment2.target=void\ entryMenu()
 comment3.params=
 comment3.target=int\ chooseMenu()
-numComments=4
+comment4.params=
+comment4.target=void\ cretadummydata()
+numComments=5

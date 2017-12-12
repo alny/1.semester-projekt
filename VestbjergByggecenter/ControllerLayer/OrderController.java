@@ -48,5 +48,24 @@ public class OrderController
         orderContainer.removeOrder(id);  
     }
 
+    public String[] invoiceLineList(int id){
+    return orderContainer.invoiceLinePrint(id);    
+    }
     
+     public void createdummydata(){
+        Integer i = 1;
+        int index = 0;
+        String k = "1";
+        int o = 1000;
+
+        while(index<10){
+
+            createOrder(false,"address", k);  
+            addProduct(o,i, 100);
+            i++;
+            k = i.toString();
+            index++;
+            o++;
+        }    
+    }
 }

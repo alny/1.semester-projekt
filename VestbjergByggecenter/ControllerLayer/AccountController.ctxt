@@ -18,4 +18,6 @@ comment7.params=phone\ loan
 comment7.target=void\ AddLoan(java.lang.String,\ ModelLayer.Loan)
 comment8.params=phone
 comment8.target=double\ getReceivable(java.lang.String)
-numComments=9
+comment9.params=
+comment9.target=void\ createdummydata()
+numComments=10
