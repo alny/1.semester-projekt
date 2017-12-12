@@ -15,6 +15,7 @@ public abstract class Product
     private String description;
     private double price;
     private int amount;
+    private Supplier supplier;
     /**
      * Constructor for objects of class ProductMain
      */
