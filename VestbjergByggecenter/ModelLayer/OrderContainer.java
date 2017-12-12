@@ -1,5 +1,6 @@
 package ModelLayer;
 import java.util.HashMap;
+import java.util.LinkedList;
 
 public class OrderContainer {
     // instance variables
@@ -44,9 +45,12 @@ public class OrderContainer {
         
     }
     
-    public String[] invoiceLinePrint(int id){
+    public LinkedList<String> invoiceLinePrint(int id){
     return orderMap.get(id).getorderlines();    
     }
     
+    public double fakuraTotalPrice(int id){
+    return orderMap.get(id).getFakturaTotalPrice();    
+    }
     
 }

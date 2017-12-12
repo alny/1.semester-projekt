@@ -1,6 +1,7 @@
 package UILayer;
 import ControllerLayer.*;
 import java.util.Scanner;
+import java.util.LinkedList;
 
 public class OrderMenu
 {
@@ -182,15 +183,15 @@ public class OrderMenu
         System.out.println("faktura");
         System.out.println("fakturanr.: " + orderCtr.findOrder(id).getId()+"              "+"Dato:"+ orderCtr.findOrder(id).getDate());
         for(String string : orderCtr.invoiceLineList(id)){
-            if(string!=null){
-                System.out.println(string);
-            }
+            System.out.println(string);
 
         }
+        System.out.println("Totalpris = " + orderCtr.getFakturaTotalPrice(id));
         System.out.println("tak fordi du handlede ved Vestbjerg byggecenter"); 
         String vent = keyboard.next();
 
     }
+
     public void createDummy(){
         orderCtr.createdummydata();    
     }

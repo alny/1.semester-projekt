@@ -2,6 +2,7 @@ package ModelLayer;
 import java.util.LinkedList;
 import java.util.Date;
 import java.util.Iterator;
+import java.util.LinkedList;
 
 public class Order{
     // instance variables
@@ -16,7 +17,8 @@ public class Order{
     private boolean betalt;
     private Date dato;
     private String datop;
-    private String[] orderLineList;
+    private LinkedList<String> orderLineList;
+    private double fakturatotalprice;
 
     //initialise contructor for class Order
     public Order(boolean delivery, String address){
@@ -28,7 +30,7 @@ public class Order{
         betalt=false;
         dato = new Date();
         datop=setDate();
-        orderLineList = new String[10];
+        orderLineList = new LinkedList<String>();
     }
     //add orderLine to order
     public void addOrderUniqueLine(Item item){
@@ -94,18 +96,22 @@ public class Order{
         return orderLine; 
     }
 
-    public String[] getorderlines(){
-        Iterator<OrderLine> it = orderLine.iterator();
-        OrderLine tmp;
-        int i = 0;
-        while(it.hasNext()){
-            tmp = it.next();
-            orderLineList[i]=tmp.getName()+"     "+"antal:"+tmp.getAmount()+"           "+"enheds pris: "+tmp.getPrice()+"      "+"Totalpris: "+(tmp.getAmount()*tmp.getPrice());
-            i ++;
+    public LinkedList<String> getorderlines(){
+        
+        
+        for(OrderLine tmp: orderLine){
+            
+            orderLineList.add(tmp.getName()+"     "+"antal:"+tmp.getAmount()+"           "+"enheds pris: "+tmp.getPrice()+"      "+"Totalpris: "+(tmp.getAmount()*tmp.getPrice()));
+            fakturatotalprice = fakturatotalprice + (tmp.getAmount()*tmp.getPrice());
 
         }
         return orderLineList;
 
     }
+    
+    public double getFakturaTotalPrice(){
+     return fakturatotalprice;   
+    }
+    
 }
 

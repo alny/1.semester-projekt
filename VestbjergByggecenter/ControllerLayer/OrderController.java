@@ -1,6 +1,7 @@
 package ControllerLayer;
 import ModelLayer.OrderContainer;
 import ModelLayer.Order;
+import java.util.LinkedList;
 
 public class OrderController
 {
@@ -48,7 +49,7 @@ public class OrderController
         orderContainer.removeOrder(id);  
     }
 
-    public String[] invoiceLineList(int id){
+    public LinkedList<String> invoiceLineList(int id){
     return orderContainer.invoiceLinePrint(id);    
     }
     
@@ -67,5 +68,9 @@ public class OrderController
             index++;
             o++;
         }    
+    }
+    
+    public double getFakturaTotalPrice(int id){
+    return orderContainer.fakuraTotalPrice(id);    
     }
 }
