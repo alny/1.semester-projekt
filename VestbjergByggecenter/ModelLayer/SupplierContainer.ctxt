@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=SupplierContainer
+comment1.params=
+comment1.target=SupplierContainer()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ SupplierContainer\r\n
+comment2.params=supplier
+comment2.target=void\ addSupplier(Supplier)
+comment3.params=firmName
+comment3.target=Supplier\ findSupplier(java.lang.String)
+numComments=4
