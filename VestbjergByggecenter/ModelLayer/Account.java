@@ -89,6 +89,11 @@ public abstract class Account
         return order;    
     }
 
+    /**
+     * tjekker tilgodehavende, på en kunde der bliver fundet i controlleren,
+     * ved at trække kundens keyset ud og køre igennem
+     * en kundes hashmap og finder ud af hvor meget de skylder. 
+     */
     public double customerReceivable(){
         HashMap<Integer, Order> map = order;
         double amount = 0;
@@ -103,14 +108,8 @@ public abstract class Account
         return amount;
     }
 
-    public double getDiscount(){
-        return discount;    
-    }
-
-    public void setDiscount(double s){
-        double a = 0;
-        a = 1-(s/100);
-        discount = a;    
-    }
+    public abstract double getDiscount();
+    
+    public abstract void setDiscount(double s);
 
 }
