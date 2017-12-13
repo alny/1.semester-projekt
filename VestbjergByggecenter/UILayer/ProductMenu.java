@@ -6,14 +6,13 @@ import java.util.Scanner;
 public class ProductMenu {
 
     private ProductController productCtr;
+    private Scanner keyboard = new Scanner(System.in);
 
     public ProductMenu(){
-        productCtr = new ProductController();
+        productCtr = new ProductController(); 
     }
 
     public void ProductMainMenu(){
-        Scanner keyboard = new Scanner(System.in);
-
         System.out.println("\f##### Produkt Menu #####");
         System.out.println("Indtast et tal mellem 1-4 for at vælge menu");
         System.out.println("Tast 5 for at gå tilbage");
@@ -39,8 +38,6 @@ public class ProductMenu {
     }
 
     public void createMassProduct(){
-        Scanner keyboard =  new Scanner(System.in);
-
         System.out.println("Produkt barkode:" );
         int barcode = keyboard.nextInt();
         System.out.println("Produkt navn:" );
@@ -53,15 +50,10 @@ public class ProductMenu {
         int amount = keyboard.nextInt();
 
         System.out.println("### " + productCtr.createMassProduct(barcode, name, description, price, amount) + " ###");
-
-        String vent = keyboard.next();
-        System.out.println(" ");
-
+        vent();
     }
-    
-    public void createUniqueProduct(){
-        Scanner keyboard =  new Scanner(System.in);
 
+    public void createUniqueProduct(){
         System.out.println("Produkt barkode:" );
         int barcode = keyboard.nextInt();
         System.out.println("Produkt navn:" );
@@ -74,14 +66,10 @@ public class ProductMenu {
         int amount = keyboard.nextInt();
 
         System.out.println("### " + productCtr.createUniqueProduct(barcode, name, description, price, amount) + " ###");
-
-        String vent = keyboard.next();
-        System.out.println(" ");   
+        vent();
     }
 
     public void createCopyProduct(){
-        Scanner keyboard =  new Scanner(System.in);
-
         System.out.println("Produkt barkode:" );
         int barcode = keyboard.nextInt();
         System.out.println("Produkt navn:" );
@@ -94,35 +82,35 @@ public class ProductMenu {
         boolean levering = keyboard.nextBoolean();
 
         System.out.println("### " + productCtr.createItem(barcode, name, description, price, levering) + " ###");
-
-        String vent = keyboard.next();
-        System.out.println(" ");   
+        vent();
     }
 
     public void findProduct(){
-        Scanner keyboard =  new Scanner(System.in);
         try {
-        System.out.println("Indtast barkode på produkt:" );
-        int barcode = keyboard.nextInt();
+            System.out.println("Indtast barkode på produkt:" );
+            int barcode = keyboard.nextInt();
 
-        Product productObj = productCtr.findSpecificProduct(barcode);
+            Product productObj = productCtr.findSpecificProduct(barcode);
 
-        System.out.println("Produkt navn: " + productObj.getName());
-        System.out.println("Produkt beskrivelse: " + productObj.getDescription());
-        System.out.println("Produkt antal: " + productObj.getPrice());
+            System.out.println("Produkt navn: " + productObj.getName());
+            System.out.println("Produkt beskrivelse: " + productObj.getDescription());
+            System.out.println("Produkt antal: " + productObj.getPrice());
 
-        String vent = keyboard.next();
-        System.out.println(" ");
-    }   catch(NullPointerException e){
-        System.out.println("Produkt kan ikke findes!");
+            String vent = keyboard.next();
+            System.out.println(" ");
+        }   catch(NullPointerException e){
+            System.out.println("Produkt kan ikke findes!");
+            vent();
+        }
+    }
+
+    public void cretedummy(){
+        productCtr.createdummydata();    
+    }
+
+    public void vent(){
         String vent = keyboard.next();
         System.out.println(" "); 
-    }
-    }
-    
-    public void cretedummy(){
-    productCtr.createdummydata();    
-        
     }
 
 }

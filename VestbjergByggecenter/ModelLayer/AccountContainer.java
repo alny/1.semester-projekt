@@ -48,7 +48,6 @@ public class AccountContainer {
         a.setPhone(newPhone);
         addAccount(a);
         return "Telefonnr. opdateret";
-
     }
 
     public String updateaddress(String phone, String newAddress){
