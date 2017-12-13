@@ -69,19 +69,19 @@ public class AccountContainer {
      * @param Loan loan og String phone 
      */
     public void addLoan(String phone, Loan loan){
-        findAccount(phone).addLoan(loan);
+        accountMap.get(phone).addLoan(loan);
     }
 
     public double customerReceivable(String phone){
         return findAccount(phone).customerReceivable();
     }
     
-    public double getRabat(String phone){
-    return accountMap.get(phone).getRabet();    
+    public double getDiscount(String phone){
+      return accountMap.get(phone).getDiscount();    
     }
     
-    public void setRabat(String phone, double s){
-    accountMap.get(phone).setRabat(s);    
+    public void setDiscount(String phone, double s){
+      accountMap.get(phone).setDiscount(s);    
     }
 }
 

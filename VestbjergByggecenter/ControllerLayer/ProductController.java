@@ -78,9 +78,9 @@ public class ProductController
     } 
 
     public double getPrice(int bar){
-
         return productContainer.getPrice(bar);    
     }
+    
 
     public void createdummydata(){
         Integer i = 1;

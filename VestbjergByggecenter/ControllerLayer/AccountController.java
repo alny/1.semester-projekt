@@ -46,7 +46,7 @@ public class AccountController
 
     }
 
-    public void AddLoan(String phone, Loan loan){
+    public void addLoan(String phone, Loan loan){
         accountContainer.addLoan(phone, loan);
     }
 
@@ -69,11 +69,11 @@ public class AccountController
         }    
     }
 
-    public void setrabat(String phone, double s){
-        accountContainer.setRabat(phone,s);    
+    public void setDiscount(String phone, double s){
+        accountContainer.setDiscount(phone, s);    
     }
 
-    public double getRabat(String phone){
-        return accountContainer.getRabat(phone);    
+    public double getDiscount(String phone){
+        return accountContainer.getDiscount(phone);    
     }
 }

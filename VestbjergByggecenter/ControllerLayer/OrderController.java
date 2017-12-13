@@ -70,6 +70,12 @@ public class OrderController
         }    
     }
     
+    public double getDicount(double discount, String phone){
+        double totalDiscount = 0;
+        double temp = (1 - accountController.getDiscount(phone))*100;
+        return totalDiscount;
+    }
+    
     public double getFakturaTotalPrice(int id){
     return orderContainer.fakuraTotalPrice(id);    
     }
