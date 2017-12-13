@@ -101,7 +101,7 @@ public class ProductMenu {
 
     public void findProduct(){
         Scanner keyboard =  new Scanner(System.in);
-
+        try {
         System.out.println("Indtast barkode på produkt:" );
         int barcode = keyboard.nextInt();
 
@@ -112,7 +112,12 @@ public class ProductMenu {
         System.out.println("Produkt antal: " + productObj.getPrice());
 
         String vent = keyboard.next();
-        System.out.println(" ");   
+        System.out.println(" ");
+    }   catch(NullPointerException e){
+        System.out.println("Kunde kan ikke findes!");
+        String vent = keyboard.next();
+        System.out.println(" "); 
+    }
     }
     
     public void cretedummy(){

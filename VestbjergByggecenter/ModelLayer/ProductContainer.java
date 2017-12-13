@@ -61,8 +61,13 @@ public class ProductContainer
      * @param int bar og int amount 
      * @return MassProduct 
      */
-    public MassProduct saleProduct(int bar, int amount){
-        return findProduct(bar).Sale(amount);
+    public MassProduct saleProduct(int bar, int amount) throws NullPointerException {
+        MassProduct findProduct = findProduct(bar).Sale(amount);
+        
+        if(findProduct == null){
+            throw new NullPointerException();
+        }
+        return findProduct;
     }
     
     /**
