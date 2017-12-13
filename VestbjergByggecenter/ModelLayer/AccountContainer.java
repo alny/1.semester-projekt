@@ -37,12 +37,16 @@ public class AccountContainer {
      * @param String phone
      * @return account 
      */
-    public Account findAccount(String phone){
-        return accountMap.get(phone);
+    public Account findAccount(String phone) throws NullPointerException {
+        Account findCustomer = accountMap.get(phone);
+        if(findCustomer == null){
+            throw new NullPointerException("Kunde kan ikke findes.");
+        }
+        return findCustomer;
     }
 
     // Getter and setter methods
-    public String updatePhone(String phone, String newPhone){
+    public String updatePhone(String phone, String newPhone)  {
         Account a = findAccount(phone);
         accountMap.remove(phone);
         a.setPhone(newPhone);

@@ -63,7 +63,6 @@ public class ProductContainer
      */
     public MassProduct saleProduct(int bar, int amount) throws NullPointerException {
         MassProduct findProduct = findProduct(bar).Sale(amount);
-        
         if(findProduct == null){
             throw new NullPointerException();
         }

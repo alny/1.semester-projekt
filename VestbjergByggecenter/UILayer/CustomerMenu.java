@@ -39,26 +39,16 @@ public class CustomerMenu
 
         } else if(choice == 3) {
             getReceivable();
-            
-
+        }
+        else if(choice == 4) {
+            setDiscount();
+        }
+        else if(choice == 5) {
 
         }
-          else if(choice == 4) {
-              setDiscount();
-
-
-        }
-          else if(choice == 5) {
-
-
-        }
-
     }
-
     public void cretaAccount(){
-
         
-
         System.out.println("Kunde Navn:" );
         String name = keyboard.next();
         System.out.println("Kunde Adresse:" );
@@ -80,54 +70,55 @@ public class CustomerMenu
     }
 
     public void updateAccount(){
-        
+        try{
+            System.out.println("Vælg hvilket felt du vil opdatere");
+            System.out.println("tast 1. for Telefon");
+            System.out.println("tast 2. for Adresse");
+            int valg = keyboard.nextInt();
+            if(valg==1){
+                System.out.println("angiv nuværende telefon nr.");
+                String phone = keyboard.next();
+                System.out.println("angiv nyt telefon nr.");
+                String newPhone = keyboard.next();      
 
-        System.out.println("Vælg hvilket felt du vil opdatere");
-        System.out.println("tast 1. for Telefon");
-        System.out.println("tast 2. for Adresse");
-        int valg = keyboard.nextInt();
-        if(valg==1){
-            System.out.println("angiv nuværende telefon nr.");
-            String phone = keyboard.next();
-            System.out.println("angiv nyt telefon nr.");
-            String newPhone = keyboard.next();      
+                accountCtr.updatePhone(phone, newPhone);
 
-            accountCtr.updatePhone(phone, newPhone);
+            }
 
+            if(valg==2){
+                System.out.println("angiv telefon nr.");
+                String phone = keyboard.next();
+                System.out.println("angiv ny adresse");
+                String newAddress = keyboard.next();      
+
+                accountCtr.updateAddress(phone, newAddress);
+
+            }
+        } catch(NullPointerException e){
+            System.out.println(e);
+            String vent = keyboard.next();
+            System.out.println(" ");
         }
-
-        if(valg==2){
-            System.out.println("angiv telefon nr.");
-            String phone = keyboard.next();
-            System.out.println("angiv ny adresse");
-            String newAddress = keyboard.next();      
-
-            accountCtr.updateAddress(phone, newAddress);
-
-        }
-
     }
-    
+
     public void getReceivable(){
-    
-    System.out.println("angiv kunde telefonnr.");
-    String phone = keyboard.next();
-    System.out.println("Vores tilgodehanvende ved kunden: "+accountCtr.getReceivable(phone));  
-    String vent = keyboard.next();
+        System.out.println("angiv kunde telefonnr.");
+        String phone = keyboard.next();
+        System.out.println("Vores tilgodehanvende ved kunden: "+accountCtr.getReceivable(phone));  
+        String vent = keyboard.next();
     }
-    
+
     public void cfretedummy(){
-    accountCtr.createdummydata();    
+        accountCtr.createdummydata();    
     }
-    
+
     public void setDiscount(){
-    
-    System.out.println("Angiv telefonnr. på kunde");
-    String phone = keyboard.next();
-    System.out.println("angiv rabat i &");
-    Double rabat = keyboard.nextDouble();
-    accountCtr.setDiscount(phone, rabat);
-        
-    
+
+        System.out.println("Angiv telefonnr. på kunde");
+        String phone = keyboard.next();
+        System.out.println("angiv rabat i &");
+        Double rabat = keyboard.nextDouble();
+        accountCtr.setDiscount(phone, rabat);
+
     }
 }
