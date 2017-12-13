@@ -114,7 +114,7 @@ public class ProductMenu {
         String vent = keyboard.next();
         System.out.println(" ");
     }   catch(NullPointerException e){
-        System.out.println("Kunde kan ikke findes!");
+        System.out.println("Produkt kan ikke findes!");
         String vent = keyboard.next();
         System.out.println(" "); 
     }
