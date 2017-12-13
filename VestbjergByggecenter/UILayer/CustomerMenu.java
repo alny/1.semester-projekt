@@ -19,7 +19,6 @@ public class CustomerMenu
     }
 
     public void CustomerMainMenu(){
-<<<<<<< HEAD
         keyboard = new Scanner(System.in);
 
         System.out.println("\f##### Kunde Menu #####");
@@ -46,45 +45,10 @@ public class CustomerMenu
         }
         else if(choice == 5) {
 
-=======
-        int choice = 0;
-        while(choice != 5){
-            System.out.println("\f##### Kunde Menu #####");
-            System.out.println("Indtast et tal mellem 1-4 for at vælge menu");
-            System.out.println("Tast 5 for at gå tilbage");
-            System.out.println(" 1. Opret Kunde");
-            System.out.println(" 2. Opdater Kunde");
-            System.out.println(" 3. Tjek Kunde tilgodehavende");
-            System.out.println(" 4. Sæt konto rabat");
-            System.out.println(" 5. tilbage");
-
-            choice = keyboard.nextInt();
-            if(choice == 1){
-                cretaAccount();
-
-            } else if(choice == 2) {
-                updateAccount();
-
-            } else if(choice == 3) {
-                getReceivable();
-
-            }
-            else if(choice == 4) {
-                setDiscount();
-
-            }
-            else if(choice == 5) {
-
-            }
->>>>>>> eb521697e3baf894ad862ec9e6506574717fa79f
         }
     }
     public void cretaAccount(){
-<<<<<<< HEAD
         
-=======
-
->>>>>>> eb521697e3baf894ad862ec9e6506574717fa79f
         System.out.println("Kunde Navn:" );
         String name = keyboard.next();
         System.out.println("Kunde Adresse:" );
@@ -106,7 +70,6 @@ public class CustomerMenu
     }
 
     public void updateAccount(){
-<<<<<<< HEAD
         try{
             System.out.println("Vælg hvilket felt du vil opdatere");
             System.out.println("tast 1. for Telefon");
@@ -135,20 +98,6 @@ public class CustomerMenu
             System.out.println(e);
             String vent = keyboard.next();
             System.out.println(" ");
-=======
-        System.out.println("Vælg hvilket felt du vil opdatere");
-        System.out.println("tast 1. for Telefon");
-        System.out.println("tast 2. for Adresse");
-        int valg = keyboard.nextInt();
-        if(valg==1){
-            System.out.println("angiv nuværende telefon nr.");
-            String phone = keyboard.next();
-            System.out.println("angiv nyt telefon nr.");
-            String newPhone = keyboard.next();      
-
-            accountCtr.updatePhone(phone, newPhone);
-
->>>>>>> eb521697e3baf894ad862ec9e6506574717fa79f
         }
     }
 
