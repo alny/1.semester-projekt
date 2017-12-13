@@ -47,7 +47,7 @@ public class LoanContainer
         findLoan(id).addItem(item);
     }
     
-    public Item returnItem(int id){
-        return findLoan(id).returnItem(id);
+    public Item returnItem(int id, int serial){
+        return findLoan(id).returnItem(serial);
     }
 }

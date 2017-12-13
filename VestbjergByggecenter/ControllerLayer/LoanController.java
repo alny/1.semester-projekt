@@ -17,21 +17,21 @@ public class LoanController
         aC = new AccountController();
     }
 
-    public String createLoan(int day, String phone){
+    public int createLoan(int day, String phone){
         Loan loan = new Loan(day);
         loanCon.addLoan(loan);
         aC.AddLoan(phone, loan);
-        return loan.toString();
+        return loan.getId();
     }
     
-    public void AddItem(int id, int bar, int serial){
+    public void addItem(int id, int bar, int serial){
         loanCon.addItem(id, pController.saleItem(bar, serial));
     }
     
-    public String ReturnItem(int id, int bar, int serial){
-        pController.returnItem(bar, loanCon.returnItem(id));
+    public String returnItem(int id,int bar, int serial){
+        pController.returnItem(bar, loanCon.returnItem(id,serial));
         return "item er returneret";
     }
     
-    
+  
 }
