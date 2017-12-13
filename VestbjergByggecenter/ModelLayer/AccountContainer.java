@@ -75,5 +75,13 @@ public class AccountContainer {
     public double customerReceivable(String phone){
         return findAccount(phone).customerReceivable();
     }
+    
+    public double getRabat(String phone){
+    return accountMap.get(phone).getRabet();    
+    }
+    
+    public void setRabat(String phone, double s){
+    accountMap.get(phone).setRabat(s);    
+    }
 }
 

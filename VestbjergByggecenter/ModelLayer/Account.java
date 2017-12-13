@@ -14,6 +14,7 @@ public abstract class Account
     private String phone;
     private HashMap<Integer, Order> order;
     private HashMap<Integer, Loan> loans;
+    private double rabat;
 
     //initialise constructor for Account class
     public Account (String name, String address, 
@@ -27,6 +28,7 @@ public abstract class Account
         accountId = counter++;
         order = new HashMap<Integer, Order>();
         loans = new HashMap<Integer, Loan>();
+        rabat = 1;
     }
 
     //set methods
@@ -99,6 +101,16 @@ public abstract class Account
             }
         }
         return amount;
+    }
+
+    public double getRabet(){
+        return rabat;    
+    }
+
+    public void setRabat(double s){
+        double a = 0;
+        a = 1-(s/100);
+        rabat = a;    
     }
 
 }

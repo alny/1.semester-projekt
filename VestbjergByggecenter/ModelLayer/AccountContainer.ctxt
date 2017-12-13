@@ -2,6 +2,10 @@
 comment0.target=AccountContainer
 comment1.params=
 comment1.target=AccountContainer()
+comment10.params=phone
+comment10.target=double\ getRabat(java.lang.String)
+comment11.params=phone\ s
+comment11.target=void\ setRabat(java.lang.String,\ double)
 comment2.params=
 comment2.target=AccountContainer\ getInstance()
 comment2.text=\r\n\ laver\ er\ AccountContainer\ hvis\ en\ ikke\ eksistere\ og\ returnere\ den\r\n\ @return\ AccountContainer\r\n
@@ -23,4 +27,4 @@ comment8.target=void\ addLoan(java.lang.String,\ Loan)
 comment8.text=\r\n\ tilf\u00F8jer\ et\ l\u00E5n\ til\ en\ account\ som\ hentes\ p\u00E5\ phone\ \r\n\ @param\ Loan\ loan\ og\ String\ phone\ \r\n
 comment9.params=phone
 comment9.target=double\ customerReceivable(java.lang.String)
-numComments=10
+numComments=12

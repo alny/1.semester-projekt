@@ -21,6 +21,7 @@ public class AccountController
         accountContainer = AccountContainer.getInstance();
 
     }
+
     public String updatePhone(String phone, String newPhone){
         return accountContainer.updatePhone(phone, newPhone);
     }
@@ -66,5 +67,13 @@ public class AccountController
             k = i.toString();
             index++;
         }    
+    }
+
+    public void setrabat(String phone, double s){
+        accountContainer.setRabat(phone,s);    
+    }
+
+    public double getRabat(String phone){
+        return accountContainer.getRabat(phone);    
     }
 }

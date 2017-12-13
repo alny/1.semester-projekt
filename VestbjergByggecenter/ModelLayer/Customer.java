@@ -4,6 +4,7 @@ public class Customer extends Account
 {
     // instance variables
     private String type;
+    private double rabat;
     
     //constructor for Customer class
     public Customer(String name, String address, 
@@ -12,6 +13,7 @@ public class Customer extends Account
         // initialise instance variables
         super(name,address,zip,city,phone);
         this.type = type;
+        rabat = 1;
         
     }
     
@@ -23,5 +25,15 @@ public class Customer extends Account
     //get method
     public String getType(){
         return type;
+    }
+    
+        public double getRabet(){
+        return rabat;    
+    }
+
+    public void setRabat(double s){
+        double a = 0;
+        a = 1-(s/100);
+        rabat = a;    
     }
 }
