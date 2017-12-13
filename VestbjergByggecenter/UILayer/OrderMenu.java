@@ -55,13 +55,13 @@ public class OrderMenu
             delivery = false;
         }else{
             delivery = true; 
-            
+
             System.out.println("Angiv leverings adresse");
             address = keyboard.nextLine();
             keyboard.nextLine();
-            
+
         }
-        
+
         System.out.println("Angiv kunde telefon nr.");
         String phone = keyboard.next();
 
@@ -75,6 +75,17 @@ public class OrderMenu
             if(barcode==5){
                 done = true;
                 System.out.println("Total = " + tmpsum);
+                System.out.println("1. for at give rabat");
+                System.out.println("2. for at forsætte med normal pris");
+                int givrabat= keyboard.nextInt();
+                double discount = 0;
+                if(givrabat==1){
+                    System.out.println("angiv rabat i &");
+                    discount = keyboard.nextDouble();
+                }
+
+                double rabat = orderCtr.getDicount(discount, phone, id);
+                System.out.println("Total pris efter rabat = " +(tmpsum*rabat));
                 System.out.println("ja/nej for at bekræfte eller annullere");
                 String bekræft = keyboard.next();
                 if(bekræft.equals("nej")){
@@ -181,12 +192,12 @@ public class OrderMenu
         String vent = keyboard.next();
 
     }
-    
+
     public void printDeliveryNote(){
         Scanner keyboard = new Scanner(System.in);
         System.out.println ("Angiv ordrenr.");
         int id = keyboard.nextInt();
-        
+
         System.out.println("### Vestbjerg byggecenter ###");
         System.out.println("Følgeseddel");
         System.out.println("Fakturanr.: " + orderCtr.findOrder(id).getId());
@@ -199,7 +210,7 @@ public class OrderMenu
         System.out.println("Tak fordi du handlede ved Vestbjerg byggecenter"); 
         String vent = keyboard.next();
     }
-    
+
     public void createDummy(){
         orderCtr.createdummydata();    
     }

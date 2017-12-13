@@ -70,7 +70,7 @@ public class OrderController
         }    
     }
     
-    public String getDicount(double discount, String phone, int id){
+    public double getDicount(double discount, String phone, int id){
         double totalDiscount = 0;
         double temp = (1 - accountController.getDiscount(phone))*100;
         double temp2 = 0;
@@ -84,12 +84,12 @@ public class OrderController
             totalDiscount = 30;
         }
         if(totalDiscount != 1){
-            s = "Rabet givet: " + totalDiscount;
+            s = "Rabet givet: " + totalDiscount + "%";
         }
         totalDiscount = 1 - totalDiscount/100;
         orderContainer.setTotalPrice(id, orderContainer.totalPrice(id)*totalDiscount);
         
-        return s;
+        return totalDiscount;
     }
     
     public double getFakturaTotalPrice(int id){
