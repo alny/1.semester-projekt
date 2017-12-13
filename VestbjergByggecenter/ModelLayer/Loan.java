@@ -43,6 +43,10 @@ public class Loan
         totalPrice =+ Day * 100;
     }
     
+    /**
+     * returnerer et item og tjekker om det er afleveret for sent, hvis det 
+     * lægger 500 til totalprice.
+     */
     public Item returnItem(int Serial){
         
         Date date = new Date();

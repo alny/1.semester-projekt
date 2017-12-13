@@ -10,28 +10,30 @@ public class LoanMenu {
         loanCtr = new LoanController();   
         keyboard = new Scanner(System.in);
     }
-    
+
     public void loanMenu(){
-        System.out.println("\f##### Lån Menu #####");
-        System.out.println("Indtast et tal mellem 1-3 for at vælge menu");
-        System.out.println(" 1. Lån produkt");
-        System.out.println(" 2. Find lån");
-        System.out.println(" 3. Gå Tilbage");
-                
-        int choice = keyboard.nextInt();
-          if(choice == 1){
-                System.out.println("Dummy");
-             } else if(choice == 2) {
-                System.out.println("Dummy");
-             } else if(choice == 3) {
-                
-             } 
-       
+        int choice = 0;
+        while(choice != 5){
+            System.out.println("\f##### Lån Menu #####");
+            System.out.println("Indtast et tal mellem 1-3 for at vælge menu");
+            System.out.println(" 1. Lån produkt");
+            System.out.println(" 2. return Item lån");
+            System.out.println(" 3. Gå Tilbage");
+            choice = keyboard.nextInt();
+            if(choice == 1){
+                createLoan();
+            } 
+            else if(choice == 2) {
+                returnItem();
+            } 
+            else if(choice == 3) {
+
+            } 
+        }
+
     }
-    
-    
-    public void CreateLoan(){
-        
+
+    public void createLoan(){
         System.out.println("Hvor mange dage vil du låne produktet?");
         int day = keyboard.nextInt();
         System.out.println("skriv telefon nummber");
@@ -44,7 +46,7 @@ public class LoanMenu {
         String vent = keyboard.next();
         System.out.println(" ");
     }
-    
+
     public void addItem(int id){
         System.out.println("skriv varer barcode");
         int bar = keyboard.nextInt();
@@ -52,7 +54,7 @@ public class LoanMenu {
         int serial = keyboard.nextInt();
         loanCtr.addItem(id,bar,serial);
     }
-    
+
     public void returnItem(){
         System.out.println("Skriv lån id");
         int id = keyboard.nextInt();

@@ -8,6 +8,7 @@ comment2.params=item
 comment2.target=void\ addItem(Item)
 comment3.params=Serial
 comment3.target=Item\ returnItem(int)
+comment3.text=\r\n\ returnerer\ et\ item\ og\ tjekker\ om\ det\ er\ afleveret\ for\ sent,\ hvis\ det\ \r\n\ l\u00E6gger\ 500\ til\ totalprice.\r\n
 comment4.params=
 comment4.target=int\ getId()
 comment5.params=

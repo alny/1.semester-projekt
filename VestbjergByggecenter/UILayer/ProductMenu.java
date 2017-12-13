@@ -13,26 +13,29 @@ public class ProductMenu {
     }
 
     public void ProductMainMenu(){
-        System.out.println("\f##### Produkt Menu #####");
-        System.out.println("Indtast et tal mellem 1-4 for at vælge menu");
-        System.out.println("Tast 5 for at gå tilbage");
-        System.out.println(" 1. Opret simpelt produkt");
-        System.out.println(" 2. Opret unikt produkt");
-        System.out.println(" 3. Opret produkt kopi");
-        System.out.println(" 4. Find Produkt");
-        System.out.println(" 5. Go Back");
+        int choice = 0;
+        while(choice != 5){
+            System.out.println("\f##### Produkt Menu #####");
+            System.out.println("Indtast et tal mellem 1-4 for at vælge menu");
+            System.out.println("Tast 5 for at gå tilbage");
+            System.out.println(" 1. Opret simpelt produkt");
+            System.out.println(" 2. Opret unikt produkt");
+            System.out.println(" 3. Opret produkt kopi");
+            System.out.println(" 4. Find Produkt");
+            System.out.println(" 5. Tilbage");
 
-        int choice = keyboard.nextInt();
-        if(choice == 1){
-            createMassProduct();
-        } else if(choice == 2) {
-            createUniqueProduct();
-        } else if(choice == 3) {
-            createCopyProduct();
-        } else if(choice == 4) {
-            findProduct();
-        } else if(choice == 5) {
+            choice = keyboard.nextInt();
+            if(choice == 1){
+                createMassProduct();
+            } else if(choice == 2) {
+                createUniqueProduct();
+            } else if(choice == 3) {
+                createCopyProduct();
+            } else if(choice == 4) {
+                findProduct();
+            } else if(choice == 5) {
 
+            }
         }
 
     }
@@ -89,13 +92,10 @@ public class ProductMenu {
         try {
             System.out.println("Indtast barkode på produkt:" );
             int barcode = keyboard.nextInt();
-
             Product productObj = productCtr.findSpecificProduct(barcode);
-
             System.out.println("Produkt navn: " + productObj.getName());
             System.out.println("Produkt beskrivelse: " + productObj.getDescription());
             System.out.println("Produkt antal: " + productObj.getPrice());
-
             String vent = keyboard.next();
             System.out.println(" ");
         }   catch(NullPointerException e){
