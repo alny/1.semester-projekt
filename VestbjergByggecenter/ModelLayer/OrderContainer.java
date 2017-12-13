@@ -45,12 +45,19 @@ public class OrderContainer {
         
     }
     
+    public void setTotalPrice(int id,double price){
+        orderMap.get(id).setTotalPrice(price);
+    }
+    
     public LinkedList<String> invoiceLinePrint(int id){
         return orderMap.get(id).getOrderLine();    
     }
     
-    public double fakuraTotalPrice(int id){
-        return orderMap.get(id).getFakturaTotalPrice();    
+    public double totalPrice(int id){
+        return orderMap.get(id).getTotalPrice();    
     }
     
+    public int amountOfProduct(int id){
+        return orderMap.get(id).amountOfProduct();
+    }
 }

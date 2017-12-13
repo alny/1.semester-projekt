@@ -70,13 +70,30 @@ public class OrderController
         }    
     }
     
-    public double getDicount(double discount, String phone){
+    public String getDicount(double discount, String phone, int id){
         double totalDiscount = 0;
         double temp = (1 - accountController.getDiscount(phone))*100;
-        return totalDiscount;
+        double temp2 = 0;
+        String s = "ingen rabat";
+        int amount = orderContainer.amountOfProduct(id);
+        if(amount < 10){
+            temp2 = 10;
+        }
+        totalDiscount = temp + temp2 + discount;
+        if(totalDiscount > 30){
+            totalDiscount = 30;
+        }
+        if(totalDiscount != 1){
+            s = "Rabet givet: " + totalDiscount;
+        }
+        totalDiscount = 1 - totalDiscount/100;
+        orderContainer.setTotalPrice(id, orderContainer.totalPrice(id)*totalDiscount);
+        
+        return s;
     }
     
     public double getFakturaTotalPrice(int id){
-    return orderContainer.fakuraTotalPrice(id);    
+        return orderContainer.totalPrice(id);    
     }
+    
 }

@@ -176,7 +176,7 @@ public class OrderMenu
             System.out.println(string);
 
         }
-        System.out.println("Subtotal = " + orderCtr.getFakturaTotalPrice(id));
+        System.out.println("Total = " + orderCtr.getFakturaTotalPrice(id));
         System.out.println("Tak fordi du handlede ved Vestbjerg byggecenter"); 
         String vent = keyboard.next();
 

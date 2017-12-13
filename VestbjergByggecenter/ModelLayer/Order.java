@@ -17,7 +17,8 @@ public class Order{
     private boolean betalt;
     private Date dato;
     private String datop;
-    private double fakturatotalprice;
+    
+    
 
     //initialise contructor for class Order
     public Order(boolean delivery, String address){
@@ -100,6 +101,7 @@ public class Order{
     }
 
     public LinkedList<String> getOrderLine(){
+        double fakturatotalprice = 0;
         LinkedList<String> orderLineList = new LinkedList<String>();
         for(OrderLine tmp: orderLine){
             orderLineList.add(tmp.getName()+"     "+"antal:"+tmp.getAmount()+"           "+"enheds pris: "+tmp.getUnitPrice()+"      "+"Totalpris: "+(tmp.getAmount()*tmp.getUnitPrice()));
@@ -107,12 +109,15 @@ public class Order{
 
         }
         return orderLineList;
-
     }
 
-    public double getFakturaTotalPrice(){
-        return fakturatotalprice;   
+    public int amountOfProduct(){
+        int amount = 0;
+        for(OrderLine line: orderLine){
+            amount = amount + line.getAmount();
+        }
+        return amount;
     }
-
+    
 }
 
