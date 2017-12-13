@@ -20,7 +20,7 @@ public class LoanController
     public int createLoan(int day, String phone){
         Loan loan = new Loan(day);
         loanCon.addLoan(loan);
-        aC.AddLoan(phone, loan);
+        aC.addLoan(phone, loan);
         return loan.getId();
     }
     
