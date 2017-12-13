@@ -82,10 +82,16 @@ public class OrderMenu
                 if(givrabat==1){
                     System.out.println("angiv rabat i &");
                     discount = keyboard.nextDouble();
+
                 }
 
                 double rabat = orderCtr.getDicount(discount, phone, id);
-                System.out.println("Total pris efter rabat = " +(tmpsum*rabat));
+                if(rabat<1){
+                    System.out.println("Total pris efter straksrabat, kontorabat og mængderabat  = " +(tmpsum*rabat));
+                }else{
+                System.out.println("Total pris = "+tmpsum);    
+                }
+                
                 System.out.println("ja/nej for at bekræfte eller annullere");
                 String bekræft = keyboard.next();
                 if(bekræft.equals("nej")){
