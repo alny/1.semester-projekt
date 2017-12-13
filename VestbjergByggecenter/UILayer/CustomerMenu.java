@@ -12,13 +12,14 @@ public class CustomerMenu
 {
     private AccountController accountCtr;
     private MainMenuUI mainMenuUI;
+    private Scanner keyboard;
     public CustomerMenu()
     {
         accountCtr = new AccountController();
     }
 
     public void CustomerMainMenu(){
-        Scanner keyboard = new Scanner(System.in);
+        keyboard = new Scanner(System.in);
 
         System.out.println("\f##### Kunde Menu #####");
         System.out.println("Indtast et tal mellem 1-2 for at vælge menu");
@@ -26,7 +27,8 @@ public class CustomerMenu
         System.out.println(" 1. Opret Kunde");
         System.out.println(" 2. Opdater Kunde");
         System.out.println(" 3. Tjek Kunde tilgodehavende");
-        System.out.println(" 4. Tilbage");
+        System.out.println(" 4. Sæt konto rabat");
+        System.out.println(" 5. tilbage");
 
         int choice = keyboard.nextInt();
         if(choice == 1){
@@ -42,6 +44,11 @@ public class CustomerMenu
 
         }
           else if(choice == 4) {
+              setDiscount();
+
+
+        }
+          else if(choice == 5) {
 
 
         }
@@ -50,7 +57,7 @@ public class CustomerMenu
 
     public void cretaAccount(){
 
-        Scanner keyboard =  new Scanner(System.in);
+        
 
         System.out.println("Kunde Navn:" );
         String name = keyboard.next();
@@ -73,7 +80,7 @@ public class CustomerMenu
     }
 
     public void updateAccount(){
-        Scanner keyboard =  new Scanner(System.in);
+        
 
         System.out.println("Vælg hvilket felt du vil opdatere");
         System.out.println("tast 1. for Telefon");
@@ -102,7 +109,7 @@ public class CustomerMenu
     }
     
     public void getReceivable(){
-    Scanner keyboard = new Scanner(System.in);
+    
     System.out.println("angiv kunde telefonnr.");
     String phone = keyboard.next();
     System.out.println("Vores tilgodehanvende ved kunden: "+accountCtr.getReceivable(phone));  
@@ -111,5 +118,16 @@ public class CustomerMenu
     
     public void cfretedummy(){
     accountCtr.createdummydata();    
+    }
+    
+    public void setDiscount(){
+    
+    System.out.println("Angiv telefonnr. på kunde");
+    String phone = keyboard.next();
+    System.out.println("angiv rabat i &");
+    Double rabat = keyboard.nextDouble();
+    accountCtr.setDiscount(phone, rabat);
+        
+    
     }
 }

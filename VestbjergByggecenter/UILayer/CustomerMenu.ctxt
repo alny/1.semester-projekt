@@ -13,4 +13,6 @@ comment5.params=
 comment5.target=void\ getReceivable()
 comment6.params=
 comment6.target=void\ cfretedummy()
-numComments=7
+comment7.params=
+comment7.target=void\ setDiscount()
+numComments=8
