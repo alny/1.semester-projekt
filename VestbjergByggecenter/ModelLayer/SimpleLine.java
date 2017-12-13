@@ -19,6 +19,7 @@ public class SimpleLine extends OrderLine
         super(amount);
         this.product = product;
         setPrice(product.getPrice()*getAmount());
+        setUnitPrice(product.getPrice());
     }
 
     public String getName(){

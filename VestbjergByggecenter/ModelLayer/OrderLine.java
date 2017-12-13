@@ -5,6 +5,7 @@ public abstract class OrderLine
     // instance variables
     private int amount;
     private double totalPrice;
+    private double unitPrice;
     private String name;
     public OrderLine(int amount)
     {
@@ -19,6 +20,14 @@ public abstract class OrderLine
     
     public void setPrice(double price){
         totalPrice = price;
+    }
+    
+    public void setUnitPrice(double price){
+        unitPrice = price;
+    }
+    
+    public double getUnitPrice(){
+        return unitPrice;
     }
     
     public int getAmount(){

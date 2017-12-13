@@ -41,16 +41,16 @@ public class OrderContainer {
     }
     
     public void removeOrder(int id){
-    orderMap.remove(id);  
+        orderMap.remove(id);  
         
     }
     
     public LinkedList<String> invoiceLinePrint(int id){
-    return orderMap.get(id).getorderlines();    
+        return orderMap.get(id).getOrderLine();    
     }
     
     public double fakuraTotalPrice(int id){
-    return orderMap.get(id).getFakturaTotalPrice();    
+        return orderMap.get(id).getFakturaTotalPrice();    
     }
     
 }
