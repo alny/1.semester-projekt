@@ -98,7 +98,7 @@ _getInstance_
     <id>UMLGeneric</id>
     <coordinates>
       <x>720</x>
-      <y>1278</y>
+      <y>1314</y>
       <w>90</w>
       <h>90</h>
     </coordinates>
@@ -219,8 +219,8 @@ _getInstance_
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>873</x>
-      <y>1278</y>
+      <x>882</x>
+      <y>1314</y>
       <w>90</w>
       <h>90</h>
     </coordinates>
@@ -233,13 +233,13 @@ sale()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>918</x>
-      <y>1242</y>
+      <x>927</x>
+      <y>1269</y>
       <w>27</w>
-      <h>54</h>
+      <h>63</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
@@ -247,7 +247,7 @@ sale()</panel_attributes>
       <x>1107</x>
       <y>981</y>
       <w>207</w>
-      <h>153</h>
+      <h>162</h>
     </coordinates>
     <panel_attributes>ProductContainer
 -
@@ -255,9 +255,11 @@ sale()</panel_attributes>
 - instance ProductContainer
 -
 _getInstance()_
++ addProduct(product Product)
 + findProduct(barcode int)
 + isUnique(barcode int)
 + saleItem(bar int, amount in)
++ saleProdukt(bar int, amount int)
 + getPrice()</panel_attributes>
     <additional_attributes/>
   </element>
@@ -395,7 +397,7 @@ _getInstance()_
 -
 - productContainer ProductContainer
 -
-+ createMassProduct(barcode int, name String, description String, price int, amount int)
++ createMassProduct(barcode int, name String, description String, price int, amount int, min int, max int)
 + createUniqueProduct(barcode int, name String, description int, price int)
 + findSpecificProduct(barcode int)
 + isUnique(barcode int)
@@ -533,7 +535,7 @@ _getInstance_
       <x>873</x>
       <y>1089</y>
       <w>180</w>
-      <h>162</h>
+      <h>189</h>
     </coordinates>
     <panel_attributes>/Product/
 -
@@ -543,6 +545,8 @@ _getInstance_
 - price double 
 - amount int
 - supplier Supplier 
+- minAmount int
+- maxAmount int
 -
 /T sale(i int)/
 create(name String, description String price int boolean udlevering)
@@ -621,12 +625,12 @@ create(name String, description String price int boolean udlevering)
     <id>Relation</id>
     <coordinates>
       <x>801</x>
-      <y>1242</y>
-      <w>90</w>
-      <h>54</h>
+      <y>1323</y>
+      <w>99</w>
+      <h>27</h>
     </coordinates>
     <panel_attributes>lt=-&gt;</panel_attributes>
-    <additional_attributes>80.0;10.0;10.0;40.0</additional_attributes>
+    <additional_attributes>90.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
