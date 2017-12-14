@@ -9,9 +9,9 @@ public class OrderMenu
     private MainMenuUI mainMenuUI;
     private ProductController productCtr;
     private Scanner keyboard;
+    private double tmpsum=0;
 
-    public OrderMenu()
-    {
+    public OrderMenu(){
         orderCtr = new OrderController();
         productCtr = new ProductController();
         keyboard = new Scanner(System.in);
@@ -54,7 +54,7 @@ public class OrderMenu
         System.out.println("tast 2 for levering");
         int levering = keyboard.nextInt();
         String address = "";
-        double tmpsum=0;
+        tmpsum=0;
         boolean delivery;
         if(levering == 1){
             delivery = false;
@@ -76,18 +76,18 @@ public class OrderMenu
 
             if(barcode==5){
                 done = true;
-                endSale(tmpsum, phone,id);
+                endSale(phone,id);
             }
             else if(productCtr.isUnique(barcode)==true){
-                createUniqueSale(tmpsum,id,barcode);
+                createUniqueSale(id,barcode);
             }
             else{
-                createSimpleSale(tmpsum,id,barcode);
+                createSimpleSale(id,barcode);
             }
         }
     }
 
-    public void createSimpleSale(double tmpsum, int id, int barcode){
+    public void createSimpleSale(int id, int barcode){
         System.out.println("Angiv antal");
         int amount = keyboard.nextInt();
         orderCtr.addProduct(id,barcode,amount);
@@ -95,7 +95,7 @@ public class OrderMenu
         System.out.println("Subtotal: "+tmpsum);
     }
 
-    public void createUniqueSale(double tmpsum, int id, int barcode){
+    public void createUniqueSale(int id, int barcode){
         System.out.println("Angiv serie nr.");
         int serial = keyboard.nextInt();
         orderCtr.addItem(id,barcode,serial);
@@ -105,7 +105,7 @@ public class OrderMenu
         System.out.println(" ");
     }
 
-    public void endSale(double tmpsum, String phone,int id){
+    public void endSale(String phone,int id){
         System.out.println("Total = " + tmpsum);
         System.out.println("1. for at give rabat");
         System.out.println("2. for at forsætte med normal pris");
@@ -137,7 +137,7 @@ public class OrderMenu
     }
 
     public void noCustSale(){
-        double tmpsum=0;
+        tmpsum=0;
         int id = orderCtr.createOrder();      
         boolean done = false;
         while(done == false){
@@ -162,18 +162,13 @@ public class OrderMenu
             }
 
             else if(productCtr.isUnique(barcode)==true){
-                createUniqueSale(tmpsum,id,barcode);
+                createUniqueSale(id,barcode);
             }
             else{
-                createSimpleSale(tmpsum,id,barcode);
+                createSimpleSale(id,barcode);
             }
 
         }
-    }
-
-    public void createOrder(){
-        Scanner keyboard =  new Scanner(System.in);
-
     }
 
     public void printInvoice(){

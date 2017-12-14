@@ -11,7 +11,6 @@ public class Order{
     private String date;
     private double totalPrice;
     private boolean delivery = false;
-    private boolean paid = false;
     private String deliveryAddress;
     private LinkedList<OrderLine> orderLine;
     private boolean betalt;
@@ -79,14 +78,12 @@ public class Order{
     }
 
     public boolean getbetalt(){
-
         return betalt;
     }
 
     public boolean setbetalt(){
         betalt = true;
         return betalt;
-
     }
 
     public String setDate(){

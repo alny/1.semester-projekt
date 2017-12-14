@@ -15,16 +15,19 @@ public abstract class Product{
     private double price;
     private int amount;
     private Supplier supplier;
+    private int minAmount;
+    private int maxAmount;
     /**
      * Constructor for objects of class ProductMain
      */
-    public Product(int barcode, String name, String description, int price, int amount){
+    public Product(int barcode, String name, String description, int price, int amount, int min,int max){
         this.barcode = barcode;
         this.name = name;
         this.description = description;
         this.price = price;
         this.price = price;
-        
+        minAmount = min;
+        maxAmount = max;
     }
 
     // Getters and setters methods

@@ -25,14 +25,14 @@ public class ProductController
         productContainer = ProductContainer.getInstance();
     }
 
-    public String createMassProduct(int barcode, String name, String description, int price, int amount){
-        MassProduct newMassProduct = new MassProduct(barcode, name, description, price, amount);
+    public String createMassProduct(int barcode, String name, String description, int price, int amount, int min, int max){
+        MassProduct newMassProduct = new MassProduct(barcode, name, description, price, amount, min, max);
         productContainer.addProduct(newMassProduct);
         return "Produkt oprettet";
     }
 
-    public String createUniqueProduct(int barcode, String name, String description, int price, int amount){
-        UniqueProduct uniqueProduct = new UniqueProduct(barcode, name, description, price, amount);      
+    public String createUniqueProduct(int barcode, String name, String description, int price, int amount, int min, int max){
+        UniqueProduct uniqueProduct = new UniqueProduct(barcode, name, description, price, amount, min, max);      
         productContainer.addProduct(uniqueProduct);
         return "Produkt oprettet";
     }
@@ -91,7 +91,7 @@ public class ProductController
 
         while(index<10){
 
-            createMassProduct(i, "name", "description", 100, 2000);  
+            createMassProduct(i, "name", "description", 100, 2000, 10, 50);  
             i++;
             index++;
         }   

@@ -4,12 +4,13 @@ import ModelLayer.*;
 import java.util.Scanner;
 
 public class ProductMenu {
-
+    
     private ProductController productCtr;
-    private Scanner keyboard = new Scanner(System.in);
+    private Scanner keyboard;
 
     public ProductMenu(){
-        productCtr = new ProductController(); 
+        productCtr = new ProductController();
+        keyboard = new Scanner(System.in);
     }
 
     public void ProductMainMenu(){
@@ -51,8 +52,11 @@ public class ProductMenu {
         int price = keyboard.nextInt();
         System.out.println("Produkt antal:" );
         int amount = keyboard.nextInt();
-
-        System.out.println("### " + productCtr.createMassProduct(barcode, name, description, price, amount) + " ###");
+        System.out.println("Min mængden");
+        int minAmount = keyboard.nextInt();
+        System.out.println("Max mængden");
+        int maxAmount = keyboard.nextInt();
+        System.out.println("### " + productCtr.createMassProduct(barcode, name, description, price, amount, minAmount, maxAmount) + " ###");
         vent();
     }
 
@@ -67,8 +71,11 @@ public class ProductMenu {
         int price = keyboard.nextInt();
         System.out.println("Produkt antal:" );
         int amount = keyboard.nextInt();
-
-        System.out.println("### " + productCtr.createUniqueProduct(barcode, name, description, price, amount) + " ###");
+        System.out.println("Min mængden");
+        int minAmount = keyboard.nextInt();
+        System.out.println("Max mængden");
+        int maxAmount = keyboard.nextInt();
+        System.out.println("### " + productCtr.createUniqueProduct(barcode, name, description, price, amount, minAmount, maxAmount) + " ###");
         vent();
     }
 
@@ -98,7 +105,8 @@ public class ProductMenu {
             System.out.println("Produkt antal: " + productObj.getPrice());
             String vent = keyboard.next();
             System.out.println(" ");
-        }   catch(NullPointerException e){
+        }   
+        catch(NullPointerException e){
             System.out.println("Produkt kan ikke findes!");
             vent();
         }

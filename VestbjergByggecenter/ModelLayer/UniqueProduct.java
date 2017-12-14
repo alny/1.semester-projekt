@@ -3,14 +3,13 @@ package ModelLayer;
 import ModelLayer.Item;
 import java.util.*;
 public class UniqueProduct extends Product {
-    
     private Map<Integer,Item> itemMap;
-    private Item item;
     /**
      * constructor til objekter af class UniqueProduct
      */
-    public UniqueProduct(int barcode, String name, String description, int price, int amount) {
-        super(barcode,name,description,price, amount);
+
+    public UniqueProduct(int barcode, String name, String description, int price, int amount, int min,int max) {
+        super(barcode,name,description,price, amount, min, max);
         itemMap = new HashMap<Integer,Item>();
     }
     
