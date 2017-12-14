@@ -13,6 +13,10 @@ public class SupplierController{
         
     }
     
+    /**
+     * kalder metoden addSupplier fra modellayer
+     * @return String
+     */
     public String createSupplier(String firmName, int amountOfOrders){
         Supplier supplier = new Supplier(firmName, amountOfOrders);
         supplierCon.addSupplier(supplier);
