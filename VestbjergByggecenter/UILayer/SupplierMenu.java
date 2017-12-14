@@ -3,24 +3,12 @@ package UILayer;
 import ControllerLayer.SupplierController;
 import java.util.Scanner;
 
-
-/**
- * Write a description of class supplierMenu here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
-public class SupplierMenu
-{
+public class SupplierMenu{
     // instance variables - replace the example below with your own
     private SupplierController supplierCtr;
     private Scanner keyboard;
 
-    /**
-     * Constructor for objects of class supplierMenu
-     */
-    public SupplierMenu()
-    {
+    public SupplierMenu(){
         supplierCtr = new SupplierController();   
         keyboard = new Scanner(System.in);
     }
