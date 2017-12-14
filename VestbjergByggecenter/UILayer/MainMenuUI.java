@@ -35,17 +35,21 @@ public class MainMenuUI
             
              if(choice == 1){
                  productMenu.ProductMainMenu();
-             } else if(choice == 2) {
+             }
+             else if(choice == 2) {
                  orderMenu.OrderMainMenu();
-             } else if(choice == 3) {
-                 System.out.println("Menu 3");
-             } else if(choice == 4) {
+             }
+             else if(choice == 3) {
+                 loanMenu.loanMenu();
+             }
+             else if(choice == 4) {
                  customerMenu.CustomerMainMenu();
-             } else  if(choice ==5){
+             }
+             else  if(choice ==5){
                  cretadummydata();
                  
              }   
-              else  if(choice ==6){
+             else  if(choice ==6){
                  exit = true;
                  System.out.println("Ses snart igen");
              } 
