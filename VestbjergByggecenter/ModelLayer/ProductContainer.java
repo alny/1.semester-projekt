@@ -12,7 +12,8 @@ public class ProductContainer
     }
 
     /**
-     * laver en ProductContainer hvis der ikke er en og returnerer den nye eller den ekstisterende 
+     * laver en ProductContainer hvis der ikke er en og returnerer 
+     * den nye eller den ekstisterende 
      */
     public static ProductContainer getInstance(){
         if(instance == null){

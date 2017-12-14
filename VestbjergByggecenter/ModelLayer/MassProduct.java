@@ -10,7 +10,7 @@ package ModelLayer;
 public class MassProduct extends Product
 {
     /**
-     * Constructor for objects of class MassProduct
+     * constructor til objekter af class MassProduct
      */
     public MassProduct(int barcode, String name, String description, int price, int amount)
     {

@@ -6,6 +6,7 @@ comment1.target=LoanContainer()
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ LoanContainer\r\n
 comment2.params=
 comment2.target=LoanContainer\ getInstance()
+comment2.text=\r\n\ laver\ en\ LoanContainer\ hvis\ der\ ikke\ er\ en\ og\ returnerer\ \r\n\ den\ nye\ eller\ den\ ekstisterende\ \r\n
 comment3.params=loan
 comment3.target=void\ addLoan(Loan)
 comment3.text=\r\n\ tilf\u00F8jer\ et\ l\u00E5n\ til\ containerens\ hashmap\r\n\ @param\ Loan\ loan\r\n

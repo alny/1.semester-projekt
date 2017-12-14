@@ -2,19 +2,17 @@ package ModelLayer;
 import java.util.HashMap;
 import java.util.LinkedList;
 
-public class OrderContainer {
-    // instance variables
-
+public class OrderContainer{
     private HashMap<Integer, Order> orderMap;
-    public static OrderContainer instance;
-
-    //Initialize constructorr
+    public static OrderContainer instance;   
     private OrderContainer(){
-        orderMap = new HashMap<Integer, Order>();
-        
+        orderMap = new HashMap<Integer, Order>();        
     }
     
-    // Create or return Singleton
+    /**
+     * laver en OrderContainer hvis der ikke er en og returnerer 
+     * den nye eller den ekstisterende 
+     */
     public static OrderContainer getInstance(){
         if(instance == null){
             instance = new OrderContainer();
@@ -22,6 +20,10 @@ public class OrderContainer {
         return instance;
     }
     
+    /**
+     * tilføjer en order til orders hashmap
+     * @param Order order
+     */ 
     public void addOrder(Order order){
         orderMap.put(order.getId(),order);
     }
@@ -30,6 +32,10 @@ public class OrderContainer {
         return orderMap.get(id);
     }
     
+    
+    /**
+     * Tilføjer et product til
+     */
     public String addProduct(int id,Product product, int amount){
         getOrder(id).addOrderSimpleLine(product, amount);
         return "varer tilføjet";

@@ -13,7 +13,10 @@ public class SupplierContainer{
         // initialise instance variables
         supplierMap = new HashMap<String, Supplier>();
     }
-    
+    /**
+     * laver en SupplierContainer hvis der ikke er en og returnerer 
+     * den nye eller den ekstisterende 
+     */
     public static SupplierContainer getInstance(){
         if(instance == null){
             instance = new SupplierContainer(); 
@@ -21,6 +24,10 @@ public class SupplierContainer{
         return instance;
     }
     
+    /**
+     * tilføjer en supplier til suppliers hashmap
+     * @param Supplier supplier
+     */
     public void addSupplier(Supplier supplier){
         supplierMap.put(supplier.getFirmName(), supplier);
     }

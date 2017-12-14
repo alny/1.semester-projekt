@@ -18,7 +18,10 @@ public class LoanContainer
     {
         loan = new HashMap<Integer, Loan>();
     }
-
+    /**
+     * laver en LoanContainer hvis der ikke er en og returnerer 
+     * den nye eller den ekstisterende 
+     */
     public static LoanContainer getInstance(){
         if(instance == null){
             instance = new LoanContainer();
