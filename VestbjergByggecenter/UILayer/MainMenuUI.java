@@ -15,6 +15,7 @@ public class MainMenuUI
     private OrderMenu orderMenu;
     private CustomerMenu customerMenu;
     private ProductMenu productMenu;
+    private SupplierMenu supplierMenu;
    
     public MainMenuUI()
     {
@@ -22,6 +23,7 @@ public class MainMenuUI
         customerMenu = new CustomerMenu();
         orderMenu = new OrderMenu();
         loanMenu = new LoanMenu();
+        supplierMenu = new SupplierMenu();
         entryMenu();
                 
     }
@@ -46,10 +48,13 @@ public class MainMenuUI
                  customerMenu.CustomerMainMenu();
              }
              else  if(choice ==5){
-                 cretadummydata();
+                 supplierMenu.supplierMenu();
                  
              }   
              else  if(choice ==6){
+                 cretadummydata();
+             } 
+               else  if(choice ==7){
                  exit = true;
                  System.out.println("Ses snart igen");
              } 
@@ -65,8 +70,9 @@ public class MainMenuUI
         System.out.println(" 2. Ordre");
         System.out.println(" 3. Lån");
         System.out.println(" 4. Kunde");
-        System.out.println(" 5. opret dummy data");
-        System.out.println(" 6. afslut");
+        System.out.println(" 5. Leverandør");
+        System.out.println(" 6. opret dummy data");
+        System.out.println(" 7. afslut");
         
         int choice = keyboard.nextInt();
         return choice;

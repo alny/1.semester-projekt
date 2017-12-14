@@ -81,7 +81,9 @@ public class ProductController
         return productContainer.getPrice(bar);    
     }
     
-
+    /**
+     * opretter dummy produkter
+     */
     public void createdummydata(){
         Integer i = 1;
         int index = 0;

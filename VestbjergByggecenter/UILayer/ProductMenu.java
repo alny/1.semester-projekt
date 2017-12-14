@@ -4,12 +4,13 @@ import ModelLayer.*;
 import java.util.Scanner;
 
 public class ProductMenu {
-
+    
     private ProductController productCtr;
-    private Scanner keyboard = new Scanner(System.in);
+    private Scanner keyboard;
 
     public ProductMenu(){
-        productCtr = new ProductController(); 
+        productCtr = new ProductController();
+        keyboard = new Scanner(System.in);
     }
 
     public void ProductMainMenu(){

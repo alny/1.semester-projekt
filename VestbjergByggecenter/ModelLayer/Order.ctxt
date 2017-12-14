@@ -16,6 +16,7 @@ comment15.params=
 comment15.target=java.util.LinkedList\ getOrderLines()
 comment16.params=
 comment16.target=java.util.LinkedList\ getOrderLine()
+comment16.text=\r\n\ laver\ en\ tom\ linkedlist\ og\ gemmer\ informationen\ fra\ Orderline\ i\ vores\ OrderLineList\r\n\ @return\ OrderLineList\r\n
 comment17.params=
 comment17.target=int\ amountOfProduct()
 comment2.params=item

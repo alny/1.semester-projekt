@@ -11,8 +11,7 @@ public class OrderMenu
     private Scanner keyboard;
     private double tmpsum=0;
 
-    public OrderMenu()
-    {
+    public OrderMenu(){
         orderCtr = new OrderController();
         productCtr = new ProductController();
         keyboard = new Scanner(System.in);

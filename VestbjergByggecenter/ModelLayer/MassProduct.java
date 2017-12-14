@@ -1,19 +1,10 @@
 package ModelLayer;
 
-
-/**
- * Write a description of class MassProduct here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
-public class MassProduct extends Product
-{
+public class MassProduct extends Product{
     /**
      * constructor til objekter af class MassProduct
      */
-    public MassProduct(int barcode, String name, String description, int price, int amount)
-    {
+    public MassProduct(int barcode, String name, String description, int price, int amount){
         super(barcode, name, description, price, amount);
     }
     

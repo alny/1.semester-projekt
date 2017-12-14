@@ -70,6 +70,11 @@ public class OrderController
         }    
     }
     
+    /**
+     * spørg om der skal gives rabat og udregner rabaten der bliver givet og giver en ny totalPrice med rabat.
+     * rabaten kan ikke overskride 30%
+     * @return totalDiscount
+     */
     public double getDicount(double discount, String phone, int id){
         double totalDiscount = 0;
         double temp = (1 - accountController.getDiscount(phone))*100;
