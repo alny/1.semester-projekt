@@ -90,7 +90,7 @@ public abstract class Account
     }
 
     /**
-     * tjekker tilgodehavende, på en kunde der bliver fundet i controlleren,
+     * tjekker tilgodehavende, på en kunde der bliver fundet i containeren,
      * ved at trække kundens keyset ud og køre igennem
      * en kundes hashmap og finder ud af hvor meget de skylder. 
      */

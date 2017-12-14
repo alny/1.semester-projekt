@@ -1,7 +1,6 @@
 package ModelLayer;
 import java.util.HashMap;
-
-import java.util.*;
+import java.util.Map;
 public class AccountContainer {
 
     // Instance variables
@@ -37,12 +36,16 @@ public class AccountContainer {
      * @param String phone
      * @return account 
      */
-    public Account findAccount(String phone){
-        return accountMap.get(phone);
+    public Account findAccount(String phone) throws NullPointerException {
+        Account findCustomer = accountMap.get(phone);
+        if(findCustomer == null){
+            throw new NullPointerException("Kunde kan ikke findes.");
+        }
+        return findCustomer;
     }
 
     // Getter and setter methods
-    public String updatePhone(String phone, String newPhone){
+    public String updatePhone(String phone, String newPhone)  {
         Account a = findAccount(phone);
         accountMap.remove(phone);
         a.setPhone(newPhone);
@@ -71,6 +74,9 @@ public class AccountContainer {
         accountMap.get(phone).addLoan(loan);
     }
 
+    /**
+     * se costumerRecieveable i Account
+     */
     public double customerReceivable(String phone){
         return findAccount(phone).customerReceivable();
     }

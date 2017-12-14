@@ -10,6 +10,7 @@ comment11.params=
 comment11.target=int\ getAmount()
 comment12.params=i
 comment12.target=java.lang.Object\ Sale(int)
+comment12.text=\r\n\ se\ uniqueproduct\ og\ massproduct\ \r\n
 comment2.params=newBarcode
 comment2.target=void\ setBarcode(int)
 comment3.params=

@@ -70,6 +70,9 @@ public abstract class Product
         return amount;
     }
     
+    /**
+     * se uniqueproduct og massproduct 
+     */
     public abstract <T> T Sale(int i);
     
     

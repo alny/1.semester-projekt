@@ -49,8 +49,8 @@ public class ProductContainer
 
     /**
      * fjerner et uniqueItem fra et produkt og returnerer det
-     * @param int bar og int serial 
-     * @return Item
+     * @param barcoden på et produkt og og et serienummer på et item  
+     * @return et item objekt
      */
     public Item saleItem(int bar, int serial){
         return findProduct(bar).Sale(serial);
@@ -58,12 +58,11 @@ public class ProductContainer
 
     /**
      * trækker amount fra et massProduct og returnerer massProduktet 
-     * @param int bar og int amount 
-     * @return MassProduct 
+     * @param barcoden på et produkt og mængden af det ønskede produkt 
+     * @return et massproduct objekt 
      */
     public MassProduct saleProduct(int bar, int amount) throws NullPointerException {
         MassProduct findProduct = findProduct(bar).Sale(amount);
-        
         if(findProduct == null){
             throw new NullPointerException();
         }
@@ -72,8 +71,8 @@ public class ProductContainer
     
     /**
      * henter prisen fra et item baseret på barcode 
-     * @param int bar 
-     * @return int price 
+     * @param et produkt barcode
+     * @return price fra et produkt 
      */
     public double getPrice(int bar){
         return findProduct(bar).getPrice();    
