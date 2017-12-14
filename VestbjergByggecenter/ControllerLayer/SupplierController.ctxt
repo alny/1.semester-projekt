@@ -4,4 +4,5 @@ comment1.params=
 comment1.target=SupplierController()
 comment2.params=firmName\ amountOfOrders
 comment2.target=java.lang.String\ createSupplier(java.lang.String,\ int)
+comment2.text=\r\n\ kalder\ metoden\ addSupplier\ fra\ modellayer\r\n\ @return\ String\r\n
 numComments=3
