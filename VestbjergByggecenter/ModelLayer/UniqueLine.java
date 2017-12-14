@@ -6,15 +6,12 @@ package ModelLayer;
  * @author (your name)
  * @version (a version number or a date)
  */
-public class UniqueLine extends OrderLine
-{
+public class UniqueLine extends OrderLine{
     private Item item;
-
     /**
-     * Constructor for objects of class UniqueLine
+     * constructor til objekter af class UniqueLine
      */
-    public UniqueLine(Item item)
-    {
+    public UniqueLine(Item item){
         super(1);
         this.item = item;
         setPrice(item.getPrice());
@@ -23,7 +20,5 @@ public class UniqueLine extends OrderLine
     
     public String getName(){
         return item.getName();
-    }
-
-    
+    }    
 }
