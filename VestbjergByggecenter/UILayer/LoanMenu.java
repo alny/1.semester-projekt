@@ -37,13 +37,16 @@ public class LoanMenu {
         System.out.println("Hvor mange dage vil du låne produktet?");
         int day = keyboard.nextInt();
         System.out.println("skriv telefon nummber");
+        System.out.println("skriv slut for at afslutte");
         String phone = keyboard.next();
         int id = loanCtr.createLoan(day, phone);
         String s = "";
         while(s != "slut"){
             addItem(id);
+            System.out.println(loanCtr.getPrice(id));
         }
         String vent = keyboard.next();
+        System.out.println("Loan id er: " + id);
         System.out.println(" ");
     }
 

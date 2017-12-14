@@ -14,6 +14,9 @@ public abstract class OrderLine
         
     }
     
+    /**
+     * getter og setter metoder
+     */
     public void setAmount(int newAmount){
         amount = newAmount;
     }

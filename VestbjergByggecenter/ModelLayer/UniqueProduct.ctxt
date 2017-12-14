@@ -2,10 +2,12 @@
 comment0.target=UniqueProduct
 comment1.params=barcode\ name\ description\ price\ amount
 comment1.target=UniqueProduct(int,\ java.lang.String,\ java.lang.String,\ int,\ int)
+comment1.text=\r\n\ constructor\ til\ objekter\ af\ class\ UniqueProduct\r\n
 comment2.params=item
 comment2.target=void\ addItem(Item)
 comment3.params=name\ description\ price\ udlevering
 comment3.target=java.lang.String\ create(java.lang.String,\ java.lang.String,\ int,\ boolean)
+comment3.text=\r\n\ Tager\ et\ item\ objekt\ og\ tilf\u00F8jer\ det\ til\ vores\ UniqueProduct\ hashmap\r\n
 comment4.params=id
 comment4.target=Item\ Sale(int)
 numComments=5

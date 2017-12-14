@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.2">
-  <zoom_level>8</zoom_level>
+  <zoom_level>9</zoom_level>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>208</x>
-      <y>1112</y>
-      <w>200</w>
-      <h>168</h>
+      <x>648</x>
+      <y>1575</y>
+      <w>225</w>
+      <h>234</h>
     </coordinates>
     <panel_attributes>Order
 -
@@ -16,12 +16,15 @@
 - date String 
 - totalprice double
 - delivery boolean 
-- paid boolean
+- betalt boolean
 - deliveryaddress string 
-- orderLine List 
+- orderLine LinkedList 
 -
 + addOrderUniqueLine(item Item)
 + addOrderSimpleLine(product
++ setDate(newDate String)
++ setTotalPrice(newTotalPrice double)
++ setDelivery( newdelivery boolean)
 + set and get methods
  </panel_attributes>
     <additional_attributes/>
@@ -29,45 +32,53 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>440</x>
-      <y>1128</y>
-      <w>184</w>
-      <h>120</h>
+      <x>315</x>
+      <y>1602</y>
+      <w>207</w>
+      <h>207</h>
     </coordinates>
     <panel_attributes>OrderContainer
 -
-- orderList ArrayList 
-- _instance OrderContainer_
+- orderList HashMap
+_instance OrderContainer_
 -
-+ _getInstance_
+_getInstance_
 + addORder (order Order)
 + getOrder (id int)
 + addProduct(id int, product Product, amount int)
-+ addItem(id int, item Item)</panel_attributes>
++ addItem(id int, item Item)
++ removeOrder(id int)
++ setTotalPrice(id int, price double)
++ invoiceLinePrint(id int)
++ totalPrice(id int)
++ amountOfProduct(id int)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>400</x>
-      <y>1168</y>
-      <w>56</w>
-      <h>24</h>
+      <x>513</x>
+      <y>1647</y>
+      <w>153</w>
+      <h>27</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;&gt;&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;10.0;50.0;10.0</additional_attributes>
+    <additional_attributes>150.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>264</x>
-      <y>856</y>
-      <w>80</w>
-      <h>80</h>
+      <x>558</x>
+      <y>1278</y>
+      <w>108</w>
+      <h>99</h>
     </coordinates>
-    <panel_attributes>OrderLine
+    <panel_attributes>/OrderLine/
 -
+- name String
 - amount int
+- totalPrice double
+- unitPrice double
 -
 +set and get </panel_attributes>
     <additional_attributes/>
@@ -75,61 +86,62 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>296</x>
-      <y>928</y>
-      <w>24</w>
-      <h>200</h>
+      <x>594</x>
+      <y>1368</y>
+      <w>180</w>
+      <h>225</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;&gt;&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;230.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0;180.0;90.0;180.0;230.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>408</x>
-      <y>856</y>
-      <w>80</w>
-      <h>80</h>
+      <x>720</x>
+      <y>1278</y>
+      <w>90</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>SimpleLine
 -
 - product ProductMain
 -
-+ get and set</panel_attributes>
++ getName</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>336</x>
-      <y>896</y>
-      <w>88</w>
-      <h>24</h>
+      <x>657</x>
+      <y>1323</y>
+      <w>81</w>
+      <h>27</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;</panel_attributes>
-    <additional_attributes>90.0;10.0;10.0;10.0</additional_attributes>
+    <additional_attributes>70.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>144</x>
-      <y>880</y>
-      <w>80</w>
-      <h>40</h>
+      <x>423</x>
+      <y>1305</y>
+      <w>90</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>UniqueLine
 -
 - item Item
--</panel_attributes>
+-
++ getName</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>216</x>
-      <y>896</y>
-      <w>64</w>
-      <h>24</h>
+      <x>504</x>
+      <y>1323</y>
+      <w>72</w>
+      <h>27</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;</panel_attributes>
     <additional_attributes>10.0;10.0;60.0;10.0</additional_attributes>
@@ -137,10 +149,10 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>144</x>
-      <y>688</y>
-      <w>104</w>
-      <h>120</h>
+      <x>423</x>
+      <y>1089</y>
+      <w>153</w>
+      <h>135</h>
     </coordinates>
     <panel_attributes>Item
 -
@@ -157,10 +169,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>192</x>
-      <y>800</y>
-      <w>24</w>
-      <h>96</h>
+      <x>477</x>
+      <y>1215</y>
+      <w>27</w>
+      <h>108</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;&gt;&gt;&gt;</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
@@ -168,10 +180,10 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>400</x>
-      <y>688</y>
-      <w>80</w>
-      <h>80</h>
+      <x>711</x>
+      <y>1089</y>
+      <w>90</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>UniqueProduct
 -
@@ -185,42 +197,21 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>240</x>
-      <y>728</y>
-      <w>176</w>
-      <h>24</h>
+      <x>567</x>
+      <y>1134</y>
+      <w>162</w>
+      <h>27</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;&gt;&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;10.0;200.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLGeneric</id>
-    <coordinates>
-      <x>544</x>
-      <y>688</y>
-      <w>112</w>
-      <h>112</h>
-    </coordinates>
-    <panel_attributes>Product
--
-- barcode int
-- name String
-. description String 
-- price int 
-- amount int 
--
-T sale(i int)
-create(name String, description String price int boolean udlevering)
-+ get and set </panel_attributes>
-    <additional_attributes/>
+    <additional_attributes>10.0;10.0;160.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>464</x>
-      <y>720</y>
-      <w>96</w>
-      <h>24</h>
+      <x>783</x>
+      <y>1125</y>
+      <w>108</w>
+      <h>27</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;</panel_attributes>
     <additional_attributes>10.0;10.0;100.0;10.0</additional_attributes>
@@ -228,10 +219,10 @@ create(name String, description String price int boolean udlevering)
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>544</x>
-      <y>840</y>
-      <w>80</w>
-      <h>80</h>
+      <x>873</x>
+      <y>1278</y>
+      <w>90</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>MassProduct 
 -
@@ -242,57 +233,57 @@ sale()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>584</x>
-      <y>792</y>
-      <w>24</w>
-      <h>64</h>
+      <x>918</x>
+      <y>1242</y>
+      <w>27</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>752</x>
-      <y>592</y>
-      <w>184</w>
-      <h>136</h>
+      <x>1107</x>
+      <y>981</y>
+      <w>207</w>
+      <h>153</h>
     </coordinates>
     <panel_attributes>ProductContainer
 -
 - productList ArrayList 
 - instance ProductContainer
 -
-+ addProduct(Product ProductMain)
-+ isUnique(barcode)
-+ findProduct (barcode String)
-+ createItem(bar int, serial int)
-+ saleItem(bar int, serial int)
-+ saleproduct(bar int, amount int)</panel_attributes>
+_getInstance()_
++ findProduct(barcode int)
++ isUnique(barcode int)
++ saleItem(bar int, amount in)
++ getPrice()</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>648</x>
-      <y>632</y>
-      <w>120</w>
-      <h>72</h>
+      <x>1017</x>
+      <y>1026</y>
+      <w>108</w>
+      <h>81</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;&gt;&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;70.0;130.0;10.0</additional_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0;100.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>648</x>
-      <y>1136</y>
-      <w>80</w>
-      <h>80</h>
+      <x>990</x>
+      <y>1593</y>
+      <w>108</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>Costumer
 -
 - String Type 
+- discount double 
 -
 + set and get </panel_attributes>
     <additional_attributes/>
@@ -300,10 +291,10 @@ sale()</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>808</x>
-      <y>1128</y>
-      <w>136</w>
-      <h>192</h>
+      <x>1170</x>
+      <y>1584</y>
+      <w>153</w>
+      <h>243</h>
     </coordinates>
     <panel_attributes>Account
 -
@@ -316,30 +307,32 @@ sale()</panel_attributes>
 - phone String 
 - order hashMap
 - loans hashmap
+- discount double
 - 
-+ addORder(order Order)
++ addOrder(order Order)
 + addLoan(loan Loan)
++ costumerRecievable()
 + get and set </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>720</x>
-      <y>1168</y>
-      <w>104</w>
-      <h>24</h>
+      <x>1089</x>
+      <y>1629</y>
+      <w>99</w>
+      <h>27</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;10.0;110.0;10.0</additional_attributes>
+    <additional_attributes>10.0;10.0;90.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>616</x>
-      <y>944</y>
-      <w>264</w>
-      <h>128</h>
+      <x>1062</x>
+      <y>1341</y>
+      <w>297</w>
+      <h>189</h>
     </coordinates>
     <panel_attributes>AccountContainer
 -
@@ -351,133 +344,52 @@ sale()</panel_attributes>
 + findAccount(phone String)
 + updatePhone(phone String, newPhone String)
 + updateAddress(phone String, newAddress String
-+ addOrder(phone  Stirng, order Order)</panel_attributes>
++ addOrder(phone  Stirng, order Order)
++ comstumerRecieveable(phone String)
++ getDiscount(phone String)
++ setDiscount(phone String, s dobuel)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>840</x>
-      <y>1064</y>
-      <w>24</w>
-      <h>80</h>
+      <x>1206</x>
+      <y>1521</y>
+      <w>27</w>
+      <h>81</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;&gt;&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>80</x>
-      <y>552</y>
-      <w>824</w>
-      <h>32</h>
-    </coordinates>
-    <panel_attributes/>
-    <additional_attributes>10.0;20.0;1010.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLGeneric</id>
-    <coordinates>
-      <x>976</x>
-      <y>1136</y>
-      <w>152</w>
-      <h>176</h>
-    </coordinates>
-    <panel_attributes>Loan 
--
-- itemMap HashMap 
-- id int 
-- coutn int 
--returnDate Date
-- day int
--calendar Calendar 
-- totalprice int
--
-+ addItem(item Item)
-+ returnItem(serial int)
-+ getid()</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>936</x>
-      <y>1200</y>
-      <w>56</w>
-      <h>24</h>
+      <x>261</x>
+      <y>1377</y>
+      <w>1152</w>
+      <h>522</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;&gt;&gt;&gt;</panel_attributes>
-    <additional_attributes>50.0;10.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLGeneric</id>
-    <coordinates>
-      <x>1176</x>
-      <y>1136</y>
-      <w>160</w>
-      <h>176</h>
-    </coordinates>
-    <panel_attributes>LoanContainer
--
-- loan Hashmap 
-- instance LoanContainer
--
-- _getInstance_
-- addLoan(loan Loan)</panel_attributes>
-    <additional_attributes/>
+    <additional_attributes>10.0;10.0;10.0;560.0;1260.0;560.0;1260.0;330.0;1180.0;330.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1120</x>
-      <y>1200</y>
-      <w>72</w>
-      <h>24</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;&gt;&gt;&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;10.0;70.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>112</x>
-      <y>728</y>
-      <w>960</w>
-      <h>664</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;&gt;&gt;&gt;&gt;</panel_attributes>
-    <additional_attributes>40.0;10.0;10.0;10.0;20.0;810.0;1180.0;810.0;1180.0;730.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>480</x>
-      <y>792</y>
-      <w>80</w>
-      <h>80</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;&gt;&gt;&gt;&gt;</panel_attributes>
-    <additional_attributes>80.0;10.0;10.0;80.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>264</x>
-      <y>1272</y>
-      <w>616</w>
-      <h>80</h>
+      <x>711</x>
+      <y>1800</y>
+      <w>540</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>lt=-&gt;</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;80.0;750.0;80.0;750.0;60.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0;580.0;60.0;580.0;30.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>288</x>
-      <y>216</y>
-      <w>184</w>
-      <h>248</h>
+      <x>783</x>
+      <y>612</y>
+      <w>234</w>
+      <h>180</h>
     </coordinates>
     <panel_attributes>ProductController
 -
@@ -488,48 +400,59 @@ sale()</panel_attributes>
 + findSpecificProduct(barcode int)
 + isUnique(barcode int)
 + createItem( bar int, name String, description, price int, udlevering boolean)
++ returnItem(bar int, item Item)
 + saleItem(bar int, serial int)
-+ saleProduct(bar int, amount int)</panel_attributes>
++ saleProduct(bar int, amount int)
++ getPrice(bar int)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>414</x>
+      <y>630</y>
+      <w>297</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>AccountController
+-
+- accountContainer AccountContainer
+-
++ createAccount(name String, addres String, zip String, city String, phone String, type String)
++ findCostumer(phone String)
++ addOrder(phone String, order Order)
++ addLoan(phone String, loan Loan)
++ getrecieveable(phone String)
++ get and set</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1098</x>
+      <y>567</y>
+      <w>198</w>
+      <h>279</h>
+    </coordinates>
+    <panel_attributes>LoanController
+-
+- loanCon LoanContainer()
+- pController ProdcutController
+- aC AccountController
+-
++ createLoan(day int, phone String)
++ addItem(id int, bar int, serial int)
++ returnItem(id int, bar int, serial int)
+ </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
       <x>0</x>
-      <y>216</y>
-      <w>264</w>
-      <h>248</h>
-    </coordinates>
-    <panel_attributes>AccountController
--
-- accountContainer AccountContainer
--
-+ updatePhone(phone String, newPhone String)
-+ updateAddress( phone String, newAddress String)
-+ createAccount(name String, addres String, zip String, city String, phone String, type String)
-+ findCostumer(phone String)
-+ addOrder(phone String, order Order)</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLGeneric</id>
-    <coordinates>
-      <x>864</x>
-      <y>216</y>
-      <w>176</w>
-      <h>248</h>
-    </coordinates>
-    <panel_attributes>System
-halign=left</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLGeneric</id>
-    <coordinates>
-      <x>504</x>
-      <y>216</y>
-      <w>320</w>
-      <h>248</h>
+      <y>576</y>
+      <w>360</w>
+      <h>279</h>
     </coordinates>
     <panel_attributes>OrderController
 -
@@ -541,7 +464,448 @@ halign=left</panel_attributes>
 + createOrder( delivery boolean, address String, phone String)
 + addItem(id int, bar int, serial int)
 + addProduct(id int, bar int, amount int)
-+ findOrder(id int)</panel_attributes>
++ findOrder(id int)
++ remove order(id int)
++ invoiceLineList(id int)
++ getDiscount(discount double, phone String, id int)
++ getFakturaTotalPrice(id int)</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>873</x>
+      <y>963</y>
+      <w>126</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Supplier 
+-
+- String firmName 
+- amountOfSales int
+-
++get </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>927</x>
+      <y>1044</y>
+      <w>27</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>630</x>
+      <y>963</y>
+      <w>189</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>SupplierContainer
+-
+- supplierMap HashMap
+_instance SupplierContainer_
+-
+_getInstance_
++ addSupplier(supplier Supplier)
++ findsupplier(firnName)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>810</x>
+      <y>999</y>
+      <w>81</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;&gt;&gt;</panel_attributes>
+    <additional_attributes>70.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>873</x>
+      <y>1089</y>
+      <w>180</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>/Product/
+-
+- barcode int
+- name String
+. description String 
+- price double 
+- amount int
+- supplier Supplier 
+-
+/T sale(i int)/
+create(name String, description String price int boolean udlevering)
++ get and set
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>153</x>
+      <y>1224</y>
+      <w>162</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>Loan
+-
+- itemMap HashMap
+- id int
+- count int
+- returnDate Date 
+-calendar Calendar 
+- totalPrice int 
+- paid boolean
+-
++ addItem(item Item)
++ returnItem(serial int)
++ getId()
++ pay()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>306</x>
+      <y>1125</y>
+      <w>135</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;&gt;&gt;</panel_attributes>
+    <additional_attributes>130.0;10.0;60.0;10.0;60.0;150.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>162</x>
+      <y>972</y>
+      <w>171</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>LoanContainer
+-
+- loan HashMap
+- instance LoanContainer
+-
++ addLoan(loan Loan)
++ returnLoan(id int)
++ payloan(id int)
++ findLoan(id int)
++ addItem(id int, item Item)
++ returnItem(id int, serial int)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>234</x>
+      <y>1116</y>
+      <w>27</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>801</x>
+      <y>1242</y>
+      <w>90</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1305</x>
+      <y>567</y>
+      <w>189</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>supplierController
+-
+supplierCon supplierContainer
+-
+createSupplier(firmName String, amountOfOrders String)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>189</x>
+      <y>441</y>
+      <w>1224</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;1340.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>414</x>
+      <y>270</y>
+      <w>189</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>CostumerMenu
+-
+- accountCtr  AccountController
+- mainMenuUI MainMenuUI
+- keyboard Scanner
+-
+- costumerMainMenu()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>648</x>
+      <y>270</y>
+      <w>180</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>ProductMenu
+-
+- productCtr ProductController
+- keyboard Scanner
+-
+productMainMenu()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>873</x>
+      <y>270</y>
+      <w>180</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>OrderMenu
+-
+- orderCtr OrderController
+- mainMenuUI MainMenuUI
+- productCtr ProductController
+- scanner Keyboard
+-
+- orderMainMenu()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1089</x>
+      <y>270</y>
+      <w>153</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>LoanMenu
+-
+- loanCtr LoanController
+- keyboard Scanner
+-
+LoanMenu()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>693</x>
+      <y>0</y>
+      <w>342</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>MainMenuUI
+-
+- accountCtr AccountController
+- orderCtr OrderController
+- productCtr ProductController
+- loanMenu LoanMenu
+- orderMenu OrderMenu
+- costumerMenu CostumerMenu
+- productMenu ProductMenu
+-
+MainMenuUI()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>864</x>
+      <y>135</y>
+      <w>324</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;340.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>864</x>
+      <y>135</y>
+      <w>126</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>729</x>
+      <y>135</y>
+      <w>162</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>160.0;10.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>504</x>
+      <y>135</y>
+      <w>387</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>410.0;10.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>927</x>
+      <y>135</y>
+      <w>27</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>10.0;150.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>468</x>
+      <y>135</y>
+      <w>243</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>10.0;150.0;250.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>702</x>
+      <y>657</y>
+      <w>99</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;90.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>351</x>
+      <y>666</y>
+      <w>81</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>576</x>
+      <y>522</y>
+      <w>540</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>580.0;50.0;580.0;10.0;10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>846</x>
+      <y>540</y>
+      <w>270</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>280.0;10.0;10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>243</x>
+      <y>837</y>
+      <w>1017</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>1110.0;10.0;1110.0;60.0;10.0;70.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>720</x>
+      <y>621</y>
+      <w>693</w>
+      <h>360</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>750.0;10.0;750.0;340.0;10.0;340.0;10.0;380.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>81</x>
+      <y>846</y>
+      <w>252</w>
+      <h>873</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;950.0;260.0;950.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>540</x>
+      <y>756</y>
+      <w>1008</w>
+      <h>693</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0;1100.0;120.0;1100.0;750.0;910.0;750.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>891</x>
+      <y>783</y>
+      <w>324</w>
+      <h>216</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;340.0;220.0</additional_attributes>
   </element>
 </diagram>

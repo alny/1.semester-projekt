@@ -11,7 +11,6 @@ public class Order{
     private String date;
     private double totalPrice;
     private boolean delivery = false;
-    private boolean paid = false;
     private String deliveryAddress;
     private LinkedList<OrderLine> orderLine;
     private boolean betalt;
@@ -79,14 +78,12 @@ public class Order{
     }
 
     public boolean getbetalt(){
-
         return betalt;
     }
 
     public boolean setbetalt(){
         betalt = true;
         return betalt;
-
     }
 
     public String setDate(){
@@ -99,12 +96,17 @@ public class Order{
     public LinkedList getOrderLines(){
         return orderLine; 
     }
-
+    
+    /**
+     * laver en tom linkedlist og gemmer informationen fra Orderline i vores OrderLineList
+     * @return OrderLineList
+     */
     public LinkedList<String> getOrderLine(){
         double fakturatotalprice = 0;
         LinkedList<String> orderLineList = new LinkedList<String>();
         for(OrderLine tmp: orderLine){
-            orderLineList.add(tmp.getName()+"     "+"antal:"+tmp.getAmount()+"           "+"enheds pris: "+tmp.getUnitPrice()+"      "+"Totalpris: "+(tmp.getAmount()*tmp.getUnitPrice()));
+            orderLineList.add(tmp.getName()+"     "+"antal:"+tmp.getAmount()+"           "+"enheds pris: "+tmp.getUnitPrice()+"  "
+            +"Totalpris: "+(tmp.getAmount()*tmp.getUnitPrice()));
             fakturatotalprice = fakturatotalprice + (tmp.getAmount()*tmp.getUnitPrice());
 
         }

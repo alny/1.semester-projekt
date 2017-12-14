@@ -24,4 +24,5 @@ comment8.params=phone
 comment8.target=double\ getReceivable(java.lang.String)
 comment9.params=
 comment9.target=void\ createdummydata()
+comment9.text=\r\n\ opretter\ dummy\ accounts\r\n
 numComments=12

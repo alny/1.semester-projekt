@@ -53,7 +53,10 @@ public class AccountController
     public double getReceivable(String phone){
         return accountContainer.customerReceivable(phone);    
     }
-
+    
+    /**
+     * opretter dummy accounts
+     */
     public void createdummydata(){
         Integer i = 1;
         int index = 0;

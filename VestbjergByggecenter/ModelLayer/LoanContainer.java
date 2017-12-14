@@ -18,7 +18,10 @@ public class LoanContainer
     {
         loan = new HashMap<Integer, Loan>();
     }
-
+    /**
+     * laver en LoanContainer hvis der ikke er en og returnerer 
+     * den nye eller den ekstisterende 
+     */
     public static LoanContainer getInstance(){
         if(instance == null){
             instance = new LoanContainer();
@@ -76,5 +79,9 @@ public class LoanContainer
      */
     public Item returnItem(int id, int serial){
         return findLoan(id).returnItem(serial);
+    }
+    
+    public double getPrice(int id){
+        return findLoan(id).getTotalPrice();
     }
 }

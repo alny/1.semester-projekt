@@ -10,8 +10,7 @@ public class OrderMenu
     private ProductController productCtr;
     private Scanner keyboard;
 
-    public OrderMenu()
-    {
+    public OrderMenu(){
         orderCtr = new OrderController();
         productCtr = new ProductController();
         keyboard = new Scanner(System.in);

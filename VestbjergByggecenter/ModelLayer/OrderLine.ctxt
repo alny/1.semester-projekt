@@ -4,6 +4,7 @@ comment1.params=amount
 comment1.target=OrderLine(int)
 comment2.params=newAmount
 comment2.target=void\ setAmount(int)
+comment2.text=\r\n\ getter\ og\ setter\ metoder\r\n
 comment3.params=price
 comment3.target=void\ setPrice(double)
 comment4.params=price

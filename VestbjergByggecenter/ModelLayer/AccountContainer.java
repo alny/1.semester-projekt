@@ -14,7 +14,7 @@ public class AccountContainer {
 
     // Create or return Singleton
     /**
-     * laver er AccountContainer hvis en ikke eksistere og returnere den
+     * laver en AccountContainer hvis en ikke eksistere og returnere den
      * @return AccountContainer
      */
     public static AccountContainer getInstance(){
@@ -44,7 +44,13 @@ public class AccountContainer {
         return findCustomer;
     }
 
-    // Getter and setter methods
+    /**
+     * Vigitig funktion - Vi bruger den som key til at store vores values i HashMappet
+     * henter en account på phone
+     * fjerne eksisterende phone og sætter newPhone
+     * @param String newPhone bliver til phone
+     * @return String bekræftelse af opdatering
+     */
     public String updatePhone(String phone, String newPhone)  {
         Account a = findAccount(phone);
         accountMap.remove(phone);

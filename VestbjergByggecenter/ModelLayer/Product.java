@@ -7,8 +7,7 @@ package ModelLayer;
  * @author (your name)
  * @version (a version number or a date)
  */
-public abstract class Product
-{
+public abstract class Product{
     
     private int barcode;
     private String name;
@@ -19,8 +18,7 @@ public abstract class Product
     /**
      * Constructor for objects of class ProductMain
      */
-    public Product(int barcode, String name, String description, int price, int amount)
-    {
+    public Product(int barcode, String name, String description, int price, int amount){
         this.barcode = barcode;
         this.name = name;
         this.description = description;
@@ -73,10 +71,6 @@ public abstract class Product
     /**
      * se uniqueproduct og massproduct 
      */
-    public abstract <T> T Sale(int i);
-    
-    
-        
-    
+    public abstract <T> T Sale(int i);    
     
 }
