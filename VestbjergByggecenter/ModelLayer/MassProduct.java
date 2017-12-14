@@ -4,8 +4,8 @@ public class MassProduct extends Product{
     /**
      * constructor til objekter af class MassProduct
      */
-    public MassProduct(int barcode, String name, String description, int price, int amount){
-        super(barcode, name, description, price, amount);
+    public MassProduct(int barcode, String name, String description, int price, int amount, int min, int max){
+        super(barcode, name, description, price, amount, min, max);
     }
     
     /**

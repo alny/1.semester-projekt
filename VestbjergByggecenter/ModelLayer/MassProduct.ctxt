@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.target=MassProduct
-comment1.params=barcode\ name\ description\ price\ amount
-comment1.target=MassProduct(int,\ java.lang.String,\ java.lang.String,\ int,\ int)
+comment1.params=barcode\ name\ description\ price\ amount\ min\ max
+comment1.target=MassProduct(int,\ java.lang.String,\ java.lang.String,\ int,\ int,\ int,\ int)
 comment1.text=\r\n\ constructor\ til\ objekter\ af\ class\ MassProduct\r\n
 comment2.params=i
 comment2.target=void\ addItem(int)
