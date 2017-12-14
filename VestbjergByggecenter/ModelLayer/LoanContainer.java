@@ -80,4 +80,8 @@ public class LoanContainer
     public Item returnItem(int id, int serial){
         return findLoan(id).returnItem(serial);
     }
+    
+    public double getPrice(int id){
+        return findLoan(id).getTotalPrice();
+    }
 }

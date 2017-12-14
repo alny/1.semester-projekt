@@ -43,8 +43,10 @@ public class LoanMenu {
         String s = "";
         while(s != "slut"){
             addItem(id);
+            System.out.println(loanCtr.getPrice(id));
         }
         String vent = keyboard.next();
+        System.out.println("Loan id er: " + id);
         System.out.println(" ");
     }
 

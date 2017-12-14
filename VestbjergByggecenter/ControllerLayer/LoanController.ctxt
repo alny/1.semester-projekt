@@ -9,4 +9,6 @@ comment3.params=id\ bar\ serial
 comment3.target=void\ addItem(int,\ int,\ int)
 comment4.params=id\ bar\ serial
 comment4.target=java.lang.String\ returnItem(int,\ int,\ int)
-numComments=5
+comment5.params=id
+comment5.target=double\ getPrice(int)
+numComments=6

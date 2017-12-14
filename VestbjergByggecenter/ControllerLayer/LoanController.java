@@ -33,5 +33,9 @@ public class LoanController
         return "item er returneret";
     }
     
+    public double getPrice(int id){
+        return loanCon.getPrice(id);
+    }
+    
   
 }

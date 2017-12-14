@@ -13,4 +13,6 @@ comment4.params=
 comment4.target=int\ getId()
 comment5.params=
 comment5.target=void\ pay()
-numComments=6
+comment6.params=
+comment6.target=double\ getTotalPrice()
+numComments=7

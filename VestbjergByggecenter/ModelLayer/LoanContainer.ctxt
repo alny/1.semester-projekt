@@ -25,4 +25,6 @@ comment7.text=\r\n\ tilf\u00F8jer\ et\ item\ til\ et\ l\u00E5n\ p\u00E5\ l\u00E5
 comment8.params=id\ serial
 comment8.target=Item\ returnItem(int,\ int)
 comment8.text=\r\n\ returnere\ et\ item\ og\ \u00E6ndrer\ status\ p\u00E5\ objekt\r\n\ @param\ id\ p\u00E5\ l\u00E5n\ og\ serienummer\ p\u00E5\ et\ item\r\n\ @return\ returnere\ et\ item\ objekt\r\n
-numComments=9
+comment9.params=id
+comment9.target=double\ getPrice(int)
+numComments=10

@@ -17,7 +17,7 @@ public class Loan
     private Date returnDate;
     private int Day;
     private Calendar calendar;
-    private int totalPrice;
+    private double totalPrice;
     private boolean paid = false;
     
     
@@ -61,5 +61,9 @@ public class Loan
     
     public void pay(){
         paid = true;
+    }
+    
+    public double getTotalPrice(){
+        return totalPrice;
     }
 }
